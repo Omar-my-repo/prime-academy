@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/shared/widgets/custom_text_field.dart';
 import 'package:prime_academy/shared/widgets/main_button.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class AddTeacherScreen extends StatefulWidget {
   const AddTeacherScreen({Key? key}) : super(key: key);
@@ -36,10 +37,7 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
-            const Text(
-              'Add New Teacher',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-            ),
+            ScreenTitle('Add New Teacher'),
             const SizedBox(height: 10),
             Expanded(
                 child: SingleChildScrollView(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/screens/payment/component/level_card.dart';
 import 'package:prime_academy/screens/teacher/add_teacher_screen.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class TeachersScreen extends StatefulWidget {
   const TeachersScreen({Key? key}) : super(key: key);
@@ -28,8 +29,7 @@ class _TeachersScreenState extends State<TeachersScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            Text('Teacher',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            ScreenTitle('Teachers'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -93,8 +93,7 @@ class _TeachersScreenState extends State<TeachersScreen> {
                                 Row(
                                   children: [
                                     Icon(Icons.phone_android,
-                                        size: 20,
-                                        color: Theme.of(context).primaryColor),
+                                        size: 20, color: Colors.grey),
                                     SizedBox(width: 10),
                                     Text('01123456789',
                                         style: TextStyle(

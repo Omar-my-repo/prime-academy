@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/shared/widgets/custom_text_field.dart';
 import 'package:prime_academy/shared/widgets/main_button.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class LevelsScreen extends StatefulWidget {
   static const String routeName = 'levelsScreen';
@@ -27,8 +28,7 @@ class _LevelsScreenState extends State<LevelsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            Text('Educational Levels',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            ScreenTitle('Educational Level'),
             SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
@@ -71,7 +71,7 @@ class _LevelsScreenState extends State<LevelsScreen> {
                                   onPressed: () {},
                                   icon: Icon(
                                     Icons.close,
-                                    color: Theme.of(context).primaryColor,
+                                    color: Colors.redAccent[100],
                                   )),
                             ],
                           )

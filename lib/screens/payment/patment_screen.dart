@@ -26,19 +26,19 @@ class PaymentScreen extends StatelessWidget {
           bottom: const TabBar(
             tabs: [
               Tab(
-                text: 'Paid',
-                icon: Icon(Icons.check),
-              ),
-              Tab(
                 text: 'Unpaid',
                 icon: Icon(Icons.close_outlined),
+              ),
+              Tab(
+                text: 'Paid',
+                icon: Icon(Icons.check),
               ),
             ],
           ),
         ),
-        body: const TabBarView(children: [
-          PaidScreen(),
+        body: TabBarView(children: [
           UnPaidScreen(),
+          PaidScreen(),
         ]),
       ),
     );

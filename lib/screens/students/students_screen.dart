@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/screens/payment/component/level_card.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class StudentsScreen extends StatefulWidget {
   static const String routeName = 'StudentsScreen';
@@ -30,8 +31,7 @@ class _Students_ScreenState extends State<StudentsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            Text('Students',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            ScreenTitle('Students'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -94,9 +94,11 @@ class _Students_ScreenState extends State<StudentsScreen> {
                                 SizedBox(height: 6),
                                 Row(
                                   children: [
-                                    Icon(Icons.phone_android,
-                                        size: 20,
-                                        color: Theme.of(context).primaryColor),
+                                    Icon(
+                                      Icons.phone_android,
+                                      size: 20,
+                                      color: Colors.grey,
+                                    ),
                                     SizedBox(width: 10),
                                     Text('01123456789',
                                         style: TextStyle(
@@ -107,9 +109,11 @@ class _Students_ScreenState extends State<StudentsScreen> {
                                 SizedBox(height: 6),
                                 Row(
                                   children: [
-                                    Icon(Icons.contact_mail_rounded,
-                                        size: 20,
-                                        color: Theme.of(context).primaryColor),
+                                    Icon(
+                                      Icons.contact_mail_rounded,
+                                      size: 20,
+                                      color: Colors.grey,
+                                    ),
                                     SizedBox(width: 10),
                                     Text('Level KG1',
                                         style: TextStyle(

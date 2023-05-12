@@ -16,14 +16,15 @@ class LevelCard extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
+            color: isSelected ? Colors.grey.withBlue(255) : null,
             border: Border.all(
                 width: isSelected ? 2 : 1,
-                color: isSelected
-                    ? Theme.of(context).primaryColor
-                    : Colors.blueGrey)),
+                color: isSelected ? Colors.deepPurpleAccent : Colors.blueGrey)),
         child: Text(
           levelName,
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueGrey),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: isSelected ? Colors.white : Colors.blueGrey),
         ),
       ),
     );

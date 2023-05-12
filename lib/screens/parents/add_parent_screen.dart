@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/shared/widgets/custom_text_field.dart';
 import 'package:prime_academy/shared/widgets/main_button.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class AddParentScreen extends StatefulWidget {
   static const String routeName = 'addParentScreen';
@@ -34,10 +35,7 @@ class _AddParentScreenState extends State<AddParentScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            Text(
-              'Add New Parent',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-            ),
+            ScreenTitle('Add New Parent'),
             const SizedBox(height: 10),
             Expanded(
                 child: SingleChildScrollView(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/shared/widgets/custom_text_field.dart';
 import 'package:prime_academy/shared/widgets/main_button.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class SubjectsScreen extends StatefulWidget {
   static const String routeName = 'subjectScreen';
@@ -27,10 +28,7 @@ class _SubjectsScreenState extends State<SubjectsScreen> {
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              'All Subjects',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-            ),
+            child: ScreenTitle('All Subjects'),
           ),
           const SizedBox(height: 10),
           Expanded(

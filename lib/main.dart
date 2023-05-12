@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/screens/home/home_screen.dart';
-import 'package:prime_academy/screens/levels/add_level.dart';
 import 'package:prime_academy/screens/login/login_screen.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
@@ -40,7 +39,6 @@ class MyApp extends StatelessWidget {
         TeachersScreen.routeName: (_) => TeachersScreen(),
         AddTeacherScreen.routeName: (_) => AddTeacherScreen(),
         LevelsScreen.routeName: (_) => LevelsScreen(),
-        AddLevelScreen.routeName: (_) => AddLevelScreen(),
         SubjectsScreen.routeName: (_) => SubjectsScreen(),
         PaymentScreen.routeName: (_) => PaymentScreen()
       },

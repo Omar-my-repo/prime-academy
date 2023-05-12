@@ -18,9 +18,11 @@ class DemoLists {
     'Timeline',
     'Examination Schedule',
     'Exams',
+    'exam correction',
     'Exam Results',
     'Student Rate',
-    'Settings',
+    'Home Work',
+    'Attendance',
   ];
 
   ///icons
@@ -31,6 +33,8 @@ class DemoLists {
     'assets/icons/book-stack.png',
     'assets/icons/school.png',
     'assets/icons/payment-method.png',
+    'assets/images/prime_logo.jpg',
+    'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',

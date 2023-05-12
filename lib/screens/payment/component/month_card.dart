@@ -31,9 +31,7 @@ class MonthCard extends StatelessWidget {
                 ),
                 border: Border.all(
                   width: isSelected ? 3 : 0,
-                  color: isSelected
-                      ? Theme.of(context).primaryColor
-                      : Color(0xff0978c0),
+                  color: isSelected ? Colors.deepPurpleAccent : Color(0xff0978c0),
                 )),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

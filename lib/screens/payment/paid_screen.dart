@@ -53,11 +53,11 @@ class _PaidScreenState extends State<PaidScreen> {
                   return Center(
                     child: MonthCard(
                       monthNumber: index + 1,
-                      isSelected: selectedMonth == index,
+                      isSelected: selectedMonth == index + 1,
                       monthName: DemoLists.monthsShortcuts[index],
                       onTap: () {
                         setState(() {
-                          selectedMonth = index;
+                          selectedMonth = index + 1;
                         });
                       },
                     ),
@@ -127,10 +127,7 @@ class _PaidScreenState extends State<PaidScreen> {
                             SizedBox(height: 12),
                           ],
                         ),
-                        LevelCard(
-                            isSelected: false, levelName: 'Paid', onTab: () {})
 
-                        //  MainButton(onTap: () {}, text: 'Paid')
                       ],
                     ),
                   ),

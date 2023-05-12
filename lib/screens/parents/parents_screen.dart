@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
+import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class ParentsScreen extends StatefulWidget {
   const ParentsScreen({Key? key}) : super(key: key);
@@ -24,8 +25,7 @@ class _ParentsScreenState extends State<ParentsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            Text('Parents',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            ScreenTitle('Parents'),
             SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
@@ -68,8 +68,7 @@ class _ParentsScreenState extends State<ParentsScreen> {
                                 Row(
                                   children: [
                                     Icon(Icons.phone_android,
-                                        size: 20,
-                                        color: Theme.of(context).primaryColor),
+                                        size: 20, color: Colors.grey),
                                     SizedBox(width: 10),
                                     Text('01123456789',
                                         style: TextStyle(
