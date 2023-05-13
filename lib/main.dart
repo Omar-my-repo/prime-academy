@@ -4,6 +4,7 @@ import 'package:prime_academy/screens/login/login_screen.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
 import 'package:prime_academy/screens/payment/patment_screen.dart';
+import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
 import 'package:prime_academy/screens/schedule/schedule_screen.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
 import 'package:prime_academy/screens/students/students_screen.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         SubjectsScreen.routeName: (_) => SubjectsScreen(),
         PaymentScreen.routeName: (_) => PaymentScreen(),
         ScheduleScreen.routeName: (_) => ScheduleScreen(),
+        AddStudentSchedule.routeName: (_) => AddStudentSchedule(),
       },
     );
   }

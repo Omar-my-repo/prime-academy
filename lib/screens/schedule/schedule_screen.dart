@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/screens/payment/component/level_card.dart';
+import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
 import 'package:prime_academy/shared/widgets/full_screen_img.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
@@ -105,7 +106,9 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, AddStudentSchedule.routeName);
+        },
         child: Icon(Icons.add),
       ),
     );
