@@ -104,8 +104,7 @@ class _PaidScreenState extends State<PaidScreen> {
                             Row(
                               children: [
                                 Icon(Icons.phone_android,
-                                    size: 20,
-                                    color: Theme.of(context).primaryColor),
+                                    size: 20, color: Colors.grey),
                                 SizedBox(width: 10),
                                 Text('01123456789',
                                     style: TextStyle(
@@ -116,8 +115,7 @@ class _PaidScreenState extends State<PaidScreen> {
                             Row(
                               children: [
                                 Icon(Icons.contact_mail_rounded,
-                                    size: 20,
-                                    color: Theme.of(context).primaryColor),
+                                    size: 20, color: Colors.grey),
                                 SizedBox(width: 10),
                                 Text('Level KG1',
                                     style: TextStyle(

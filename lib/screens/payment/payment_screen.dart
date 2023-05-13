@@ -13,9 +13,7 @@ class PaymentScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).primaryColor,
-          surfaceTintColor: Colors.red,
-          // shadowColor: Colors.red,
-
+          iconTheme: IconThemeData(color: Colors.white),
           title: Text(
             'Payments',
             style: TextStyle(

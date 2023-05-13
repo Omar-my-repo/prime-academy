@@ -107,8 +107,7 @@ class _UnPaidScreenState extends State<UnPaidScreen> {
                             Row(
                               children: [
                                 Icon(Icons.phone_android,
-                                    size: 20,
-                                    color: Theme.of(context).primaryColor),
+                                    size: 20, color: Colors.grey),
                                 SizedBox(width: 10),
                                 Text('01123456789',
                                     style: TextStyle(
@@ -119,8 +118,7 @@ class _UnPaidScreenState extends State<UnPaidScreen> {
                             Row(
                               children: [
                                 Icon(Icons.contact_mail_rounded,
-                                    size: 20,
-                                    color: Theme.of(context).primaryColor),
+                                    size: 20, color: Colors.grey),
                                 SizedBox(width: 10),
                                 Text('Level KG1',
                                     style: TextStyle(
@@ -130,7 +128,11 @@ class _UnPaidScreenState extends State<UnPaidScreen> {
                             SizedBox(height: 12),
                           ],
                         ),
-                        MainButton(text: 'Pay', onTap: () {}),
+                        MainButton(
+                            text: 'Pay',
+                            bgColor:
+                                Theme.of(context).primaryColor.withOpacity(.7),
+                            onTap: () {}),
                         //  MainButton(onTap: () {}, text: 'Paid')
                       ],
                     ),

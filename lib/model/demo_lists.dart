@@ -1,9 +1,10 @@
+import 'package:prime_academy/exams/exams_screen.dart';
 import 'package:prime_academy/model/schedule.dart';
 import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
 import 'package:prime_academy/screens/homework/homework_screen.dart';
 import 'package:prime_academy/screens/levels/levels_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
-import 'package:prime_academy/screens/payment/patment_screen.dart';
+import 'package:prime_academy/screens/payment/payment_screen.dart';
 import 'package:prime_academy/screens/schedule/student_schedule_screen.dart';
 import 'package:prime_academy/screens/students/students_screen.dart';
 import 'package:prime_academy/screens/subjects/subjects_screen.dart';
@@ -39,6 +40,7 @@ class DemoLists {
     StudentScheduleScreen.routeName,
     ExamsScheduleScreen.routeName,
     HomeworkScreen.routeName,
+    ExamsScreen.routeName,
   ];
 
   ///icons
@@ -51,8 +53,8 @@ class DemoLists {
     'assets/icons/payment-method.png',
     'assets/icons/calendar.png',
     'assets/icons/halloween.png',
-    'assets/icons/working.png',
-    'assets/images/prime_logo.jpg',
+    'assets/icons/homework.png',
+    'assets/icons/exam.png',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',

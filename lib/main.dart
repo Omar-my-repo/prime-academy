@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prime_academy/exams/exams_screen.dart';
 import 'package:prime_academy/screens/exams_schadule/add_exam_schedule.dart';
 import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
 import 'package:prime_academy/screens/home/home_screen.dart';
@@ -7,7 +8,7 @@ import 'package:prime_academy/screens/homework/homework_screen.dart';
 import 'package:prime_academy/screens/login/login_screen.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
-import 'package:prime_academy/screens/payment/patment_screen.dart';
+import 'package:prime_academy/screens/payment/payment_screen.dart';
 import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
 import 'package:prime_academy/screens/schedule/student_schedule_screen.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         AddExamSchedule.routeName: (_) => AddExamSchedule(),
         HomeworkScreen.routeName: (_) => HomeworkScreen(),
         AddHomework.routeName: (_) => AddHomework(),
+        ExamsScreen.routeName: (_) => ExamsScreen(),
       },
     );
   }
