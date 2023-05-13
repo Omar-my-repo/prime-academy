@@ -12,10 +12,17 @@ class HomeScreen extends StatelessWidget {
       builder: (contex, orientation) {
         return Scaffold(
           appBar: AppBar(
-            // toolbarHeight: 20,
             backgroundColor: Theme.of(context).primaryColor,
-            elevation: 0,
-            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
+            actions: [
+              Card(
+                child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.settings,
+                      color: Colors.black,
+                    )),
+              )
+            ],
           ),
           body: Column(
             children: [

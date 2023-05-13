@@ -17,14 +17,7 @@ class _Students_ScreenState extends State<StudentsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black),
-        actions: [
-          // IconButton(onPressed: (){}, icon: Icon(Icons.search))
-        ],
-      ),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
