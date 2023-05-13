@@ -5,14 +5,14 @@ import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
 import 'package:prime_academy/shared/widgets/full_screen_img.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
-class ScheduleScreen extends StatefulWidget {
+class StudentScheduleScreen extends StatefulWidget {
   static const String routeName = 'ScheduleScreen';
 
   @override
-  State<ScheduleScreen> createState() => _ScheduleScreenState();
+  State<StudentScheduleScreen> createState() => _StudentScheduleScreenState();
 }
 
-class _ScheduleScreenState extends State<ScheduleScreen> {
+class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
   int selectedLevel = 0;
 
   @override
@@ -51,7 +51,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
             Expanded(
               child: ListView.separated(
                   padding: EdgeInsets.symmetric(vertical: 10),
-                  itemCount: DemoLists.schedules.length,
+                  itemCount: DemoLists.studentsSchedule.length,
                   separatorBuilder: (contex, index) => SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return Card(
@@ -65,14 +65,14 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => FullScreenImage(
-                                          imgUrl:
-                                              DemoLists.schedules[index].imgUrl,
+                                      imgUrl: DemoLists
+                                              .studentsSchedule[index].imgUrl,
                                         ))),
                             child: SizedBox(
                               height: 200,
                               width: double.infinity,
                               child: Image.asset(
-                                DemoLists.schedules[index].imgUrl,
+                                DemoLists.studentsSchedule[index].imgUrl,
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -85,11 +85,11 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  DemoLists.schedules[index].date,
+                                  DemoLists.studentsSchedule[index].date,
                                   style: TextStyle(fontSize: 16),
                                 ),
                                 SizedBox(height: 4),
-                                Text(DemoLists.schedules[index].notes,
+                                Text(DemoLists.studentsSchedule[index].notes,
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold)),

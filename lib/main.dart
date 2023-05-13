@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:prime_academy/screens/examination_schadule/add_exam_schedule.dart';
+import 'package:prime_academy/screens/examination_schadule/exams_schadule_screen.dart';
 import 'package:prime_academy/screens/home/home_screen.dart';
 import 'package:prime_academy/screens/login/login_screen.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
 import 'package:prime_academy/screens/payment/patment_screen.dart';
 import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
-import 'package:prime_academy/screens/schedule/schedule_screen.dart';
+import 'package:prime_academy/screens/schedule/student_schedule_screen.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
 import 'package:prime_academy/screens/students/students_screen.dart';
 import 'package:prime_academy/screens/subjects/subjects_screen.dart';
@@ -46,8 +48,10 @@ class MyApp extends StatelessWidget {
         LevelsScreen.routeName: (_) => LevelsScreen(),
         SubjectsScreen.routeName: (_) => SubjectsScreen(),
         PaymentScreen.routeName: (_) => PaymentScreen(),
-        ScheduleScreen.routeName: (_) => ScheduleScreen(),
+        StudentScheduleScreen.routeName: (_) => StudentScheduleScreen(),
         AddStudentSchedule.routeName: (_) => AddStudentSchedule(),
+        ExamsScheduleScreen.routeName: (_) => ExamsScheduleScreen(),
+        AddExamSchedule.routeName: (_) => AddExamSchedule(),
       },
     );
   }

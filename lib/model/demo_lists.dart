@@ -1,8 +1,9 @@
 import 'package:prime_academy/model/schedule.dart';
+import 'package:prime_academy/screens/examination_schadule/exams_schadule_screen.dart';
 import 'package:prime_academy/screens/levels/levels_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
 import 'package:prime_academy/screens/payment/patment_screen.dart';
-import 'package:prime_academy/screens/schedule/schedule_screen.dart';
+import 'package:prime_academy/screens/schedule/student_schedule_screen.dart';
 import 'package:prime_academy/screens/students/students_screen.dart';
 import 'package:prime_academy/screens/subjects/subjects_screen.dart';
 import 'package:prime_academy/screens/teacher/teachers_screen.dart';
@@ -18,12 +19,12 @@ class DemoLists {
     'Payment',
     'Schedule',
     'Examination Schedule',
+    'Home Work',
     'Exams',
     'exam correction',
     'Exam Results',
     'Student Rate',
     'Student Level',
-    'Home Work',
     'Attendance',
   ];
 
@@ -34,7 +35,8 @@ class DemoLists {
     SubjectsScreen.routeName,
     LevelsScreen.routeName,
     PaymentScreen.routeName,
-    ScheduleScreen.routeName
+    StudentScheduleScreen.routeName,
+    ExamsScheduleScreen.routeName,
   ];
 
   ///icons
@@ -46,8 +48,8 @@ class DemoLists {
     'assets/icons/school.png',
     'assets/icons/payment-method.png',
     'assets/icons/calendar.png',
-    'assets/images/prime_logo.jpg',
-    'assets/images/prime_logo.jpg',
+    'assets/icons/halloween.png',
+    'assets/icons/working.png',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
@@ -125,7 +127,7 @@ class DemoLists {
     'Dec'
   ];
 
-  static List<Schedule> schedules = [
+  static List<Schedule> studentsSchedule = [
     Schedule(
         id: '',
         imgUrl: 'assets/images/student_schedule.png',
@@ -149,6 +151,34 @@ class DemoLists {
     Schedule(
         id: '',
         imgUrl: 'assets/images/student_schedule.png',
+        date: '12-12-2012',
+        notes: 'Schedule 5 note here'),
+  ];
+
+  static List<Schedule> examSchedule = [
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/exam_schedule.jpg',
+        date: '12-12-2012',
+        notes: 'Schedule 1 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/prime_logo.jpg',
+        date: '12-12-2012',
+        notes: 'Schedule 2 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/exam_schedule.jpg',
+        date: '12-12-2012',
+        notes: 'Schedule 3 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/prime_logo.jpg',
+        date: '12-12-2012',
+        notes: 'Schedule 4 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
         notes: 'Schedule 5 note here'),
   ];
