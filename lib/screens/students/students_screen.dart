@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
-import 'package:prime_academy/screens/payment/component/level_card.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
+import 'package:prime_academy/shared/widgets/level_card.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class StudentsScreen extends StatefulWidget {

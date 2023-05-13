@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
-import 'package:prime_academy/screens/examination_schadule/add_exam_schedule.dart';
-import 'package:prime_academy/screens/payment/component/level_card.dart';
+import 'package:prime_academy/screens/exams_schadule/add_exam_schedule.dart';
 import 'package:prime_academy/shared/widgets/full_screen_img.dart';
+import 'package:prime_academy/shared/widgets/level_card.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class ExamsScheduleScreen extends StatefulWidget {

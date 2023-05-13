@@ -5,15 +5,16 @@ import 'package:prime_academy/shared/widgets/level_card.dart';
 import 'package:prime_academy/shared/widgets/main_button.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
-class AddStudentSchedule extends StatefulWidget {
-  static const routeName = 'AddStudentSchedule';
+class AddHomework extends StatefulWidget {
+  static const String routeName = 'addHomework';
 
   @override
-  State<AddStudentSchedule> createState() => _AddStudentScheduleState();
+  State<AddHomework> createState() => _AddHomeworkState();
 }
 
-class _AddStudentScheduleState extends State<AddStudentSchedule> {
+class _AddHomeworkState extends State<AddHomework> {
   int selectedLevel = 0;
+  int selectedSubject = 0;
   TextEditingController noteController = TextEditingController();
 
   @override
@@ -27,7 +28,7 @@ class _AddStudentScheduleState extends State<AddStudentSchedule> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 10),
-              ScreenTitle('Add Student Schedule'),
+              ScreenTitle('Add Homework'),
               SizedBox(height: 10),
               SizedBox(
                 height: 40,
@@ -43,6 +44,27 @@ class _AddStudentScheduleState extends State<AddStudentSchedule> {
                           onTab: () {
                             setState(() {
                               selectedLevel = index;
+                            });
+                          },
+                        ),
+                      );
+                    }),
+              ),
+              SizedBox(height: 10),
+              SizedBox(
+                height: 40,
+                child: ListView.separated(
+                    itemCount: DemoLists.subjects.length,
+                    scrollDirection: Axis.horizontal,
+                    separatorBuilder: (context, index) => SizedBox(width: 10),
+                    itemBuilder: (context, index) {
+                      return Center(
+                        child: LevelCard(
+                          levelName: DemoLists.subjects[index],
+                          isSelected: selectedSubject == index,
+                          onTab: () {
+                            setState(() {
+                              selectedSubject = index;
                             });
                           },
                         ),

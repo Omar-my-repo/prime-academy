@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
-import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
+import 'package:prime_academy/screens/homework/add_homework.dart';
 import 'package:prime_academy/shared/widgets/full_screen_img.dart';
 import 'package:prime_academy/shared/widgets/level_card.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
-class StudentScheduleScreen extends StatefulWidget {
-  static const String routeName = 'ScheduleScreen';
+class HomeworkScreen extends StatefulWidget {
+  static const String routeName = 'homeworkScreen';
 
   @override
-  State<StudentScheduleScreen> createState() => _StudentScheduleScreenState();
+  State<HomeworkScreen> createState() => _HomeworkScreenState();
 }
 
-class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
+class _HomeworkScreenState extends State<HomeworkScreen> {
   int selectedLevel = 0;
+  int selectedSubject = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            ScreenTitle('Schedule'),
+            ScreenTitle('Homework'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -48,11 +49,32 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
                   }),
             ),
             SizedBox(height: 10),
+            SizedBox(
+              height: 40,
+              child: ListView.separated(
+                  itemCount: DemoLists.subjects.length,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(width: 10),
+                  itemBuilder: (context, index) {
+                    return Center(
+                      child: LevelCard(
+                        levelName: DemoLists.subjects[index],
+                        isSelected: selectedSubject == index,
+                        onTab: () {
+                          setState(() {
+                            selectedSubject = index;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
                   padding: EdgeInsets.symmetric(vertical: 10),
-                  itemCount: DemoLists.studentsSchedule.length,
-                  separatorBuilder: (contex, index) => SizedBox(height: 10),
+                  itemCount: DemoLists.homeworkSchedule.length,
+                  separatorBuilder: (context, index) => SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return Card(
                       elevation: 5,
@@ -62,17 +84,19 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
                         children: [
                           InkWell(
                             onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => FullScreenImage(
-                                      imgUrl: DemoLists
-                                              .studentsSchedule[index].imgUrl,
-                                        ))),
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FullScreenImage(
+                                  imgUrl:
+                                      DemoLists.homeworkSchedule[index].imgUrl,
+                                ),
+                              ),
+                            ),
                             child: SizedBox(
                               height: 200,
                               width: double.infinity,
                               child: Image.asset(
-                                DemoLists.studentsSchedule[index].imgUrl,
+                                DemoLists.homeworkSchedule[index].imgUrl,
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -85,11 +109,11 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  DemoLists.studentsSchedule[index].date,
+                                  DemoLists.homeworkSchedule[index].date,
                                   style: TextStyle(fontSize: 16),
                                 ),
                                 SizedBox(height: 4),
-                                Text(DemoLists.studentsSchedule[index].notes,
+                                Text(DemoLists.homeworkSchedule[index].notes,
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold)),
@@ -107,7 +131,7 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, AddStudentSchedule.routeName);
+          Navigator.pushNamed(context, AddHomework.routeName);
         },
         child: Icon(Icons.add),
       ),

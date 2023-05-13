@@ -1,5 +1,6 @@
 import 'package:prime_academy/model/schedule.dart';
-import 'package:prime_academy/screens/examination_schadule/exams_schadule_screen.dart';
+import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
+import 'package:prime_academy/screens/homework/homework_screen.dart';
 import 'package:prime_academy/screens/levels/levels_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
 import 'package:prime_academy/screens/payment/patment_screen.dart';
@@ -37,6 +38,7 @@ class DemoLists {
     PaymentScreen.routeName,
     StudentScheduleScreen.routeName,
     ExamsScheduleScreen.routeName,
+    HomeworkScreen.routeName,
   ];
 
   ///icons
@@ -179,6 +181,34 @@ class DemoLists {
     Schedule(
         id: '',
         imgUrl: 'assets/images/exam_schedule.jpg',
+        date: '12-12-2012',
+        notes: 'Schedule 5 note here'),
+  ];
+
+  static List<Schedule> homeworkSchedule = [
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/homework.png',
+        date: '12-12-2012',
+        notes: 'Schedule 1 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/homework.png',
+        date: '12-12-2012',
+        notes: 'Schedule 2 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/homework.png',
+        date: '12-12-2012',
+        notes: 'Schedule 3 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/homework.png',
+        date: '12-12-2012',
+        notes: 'Schedule 4 note here'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
         notes: 'Schedule 5 note here'),
   ];
