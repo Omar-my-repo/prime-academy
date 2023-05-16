@@ -21,11 +21,11 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ScreenTitle('Homework'),
             SizedBox(height: 10),
             SizedBox(
@@ -33,6 +33,7 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
               child: ListView.separated(
                   itemCount: DemoLists.levels.length,
                   scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   separatorBuilder: (context, index) => SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
@@ -54,11 +55,13 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
               child: ListView.separated(
                   itemCount: DemoLists.subjects.length,
                   scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   separatorBuilder: (context, index) => SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
                       child: LevelCard(
                         levelName: DemoLists.subjects[index],
+                        bgColor: Colors.orange.withOpacity(.5),
                         isSelected: selectedSubject == index,
                         onTab: () {
                           setState(() {
@@ -69,7 +72,10 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
                     );
                   }),
             ),
-            SizedBox(height: 10),
+            Divider(
+              thickness: 1,
+            ),
+            // SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
                   padding: EdgeInsets.symmetric(vertical: 10),
@@ -77,7 +83,7 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
                   separatorBuilder: (context, index) => SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return Card(
-                      elevation: 5,
+                      elevation: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,13 +116,14 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
                               children: [
                                 Text(
                                   DemoLists.homeworkSchedule[index].date,
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.blueGrey,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(height: 4),
                                 Text(DemoLists.homeworkSchedule[index].notes,
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)),
+                                    style: TextStyle(fontSize: 16)),
                               ],
                             ),
                           ),
@@ -131,7 +138,9 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, AddHomework.routeName);
+          // Navigator.pushNamed(context, AddHomework.routeName);
+          Navigator.of(context, rootNavigator: true)
+              .pushNamed(AddHomework.routeName);
         },
         child: Icon(Icons.add),
       ),

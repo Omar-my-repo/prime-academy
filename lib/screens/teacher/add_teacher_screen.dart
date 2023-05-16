@@ -36,7 +36,7 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             ScreenTitle('Add New Teacher'),
             const SizedBox(height: 10),
             Expanded(
@@ -156,7 +156,7 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                         itemBuilder: (_, int index) {
                           return Card(
                             color: Colors.white,
-                            elevation: 4.0,
+                            elevation: 2.0,
                             child: CheckboxListTile(
                               title: Text(DemoLists.levels[index]),
                               //subtitle: Text(this.noteList[position].actn_on),

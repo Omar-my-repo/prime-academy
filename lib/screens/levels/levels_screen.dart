@@ -19,20 +19,20 @@ class _LevelsScreenState extends State<LevelsScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ScreenTitle('Educational Level'),
             SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
                 itemCount: DemoLists.levels.length,
-                separatorBuilder: (context, index) => SizedBox(height: 6),
+                separatorBuilder: (context, index) => SizedBox(height: 4),
                 itemBuilder: (context, index) {
                   return Card(
-                    elevation: 5,
+                    elevation: 2,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 16.0),
                       child: Row(
@@ -61,7 +61,7 @@ class _LevelsScreenState extends State<LevelsScreen> {
                                   onPressed: () {},
                                   icon: Icon(
                                     Icons.edit,
-                                    color: Theme.of(context).primaryColor,
+                                    color: Colors.grey[600],
                                   )),
                               IconButton(
                                   onPressed: () {},

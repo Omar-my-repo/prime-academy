@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 class LevelCard extends StatelessWidget {
   bool isSelected;
   String levelName;
+  Color? bgColor;
   Function() onTab;
 
   LevelCard(
-      {required this.isSelected, required this.levelName, required this.onTab});
+      {required this.isSelected,
+      required this.levelName,
+      required this.onTab,
+      this.bgColor});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +21,13 @@ class LevelCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
             color: isSelected
-                ? Theme.of(context).primaryColor.withOpacity(.7)
+                ? bgColor != null
+                    ? bgColor
+                    : Colors.blue.withOpacity(.7)
                 : null,
             border: Border.all(
-                width: isSelected ? 2 : 1,
-                color: isSelected
-                    ? Theme.of(context).primaryColor
-                    : Colors.blueGrey)),
+                width: isSelected ? 0.0 : 0,
+                color: isSelected ? Colors.grey[200]! : Colors.blueGrey)),
         child: Text(
           levelName,
           style: TextStyle(

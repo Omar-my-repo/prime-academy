@@ -17,83 +17,82 @@ class _SubjectsScreenState extends State<SubjectsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: ScreenTitle('All Subjects'),
-          ),
-          const SizedBox(height: 10),
-          Expanded(
-            child: ListView.separated(
-                itemCount: DemoLists.levels.length,
-                separatorBuilder: (context, index) => SizedBox(height: 10),
-                itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 4,
-                    child: ExpansionTile(
-                      title: Text(
-                        DemoLists.levels[index],
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 1.2),
-                      ),
-                      children: [
-                        Container(
-                          height: 120,
-                          color: Colors.grey[200],
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 10),
-                              Expanded(
-                                child: ListView.separated(
-                                    itemCount: DemoLists.subjects.length,
-                                    scrollDirection: Axis.horizontal,
-                                    separatorBuilder: (context, index) =>
-                                        SizedBox(width: 10),
-                                    itemBuilder: (context, index) {
-                                      return Container(
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 8, horizontal: 12),
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                              width: 1,
-                                              color: Theme.of(context)
-                                                  .primaryColor
-                                                  .withOpacity(.5),
+      appBar: AppBar(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 10),
+            ScreenTitle('All Subjects'),
+            const SizedBox(height: 10),
+            Expanded(
+              child: ListView.separated(
+                  itemCount: DemoLists.levels.length,
+                  separatorBuilder: (context, index) => SizedBox(height: 4),
+                  itemBuilder: (context, index) {
+                    return Card(
+                      elevation: 2,
+                      child: ExpansionTile(
+                        title: Text(
+                          DemoLists.levels[index],
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 1.2),
+                        ),
+                        children: [
+                          Container(
+                            height: 110,
+                            padding: EdgeInsets.symmetric(horizontal: 8),
+                            color: Colors.grey[200],
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(height: 10),
+                                Expanded(
+                                  child: ListView.separated(
+                                      itemCount: DemoLists.subjects.length,
+                                      scrollDirection: Axis.horizontal,
+                                      separatorBuilder: (context, index) =>
+                                          SizedBox(width: 10),
+                                      itemBuilder: (context, index) {
+                                        return Container(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 12),
+                                          decoration: BoxDecoration(
+                                              color:
+                                                  Colors.orange.withOpacity(.5),
+                                              borderRadius:
+                                                  BorderRadius.circular(12)),
+                                          child: Center(
+                                            child: Text(
+                                              DemoLists.subjects[index],
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w500),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(12)),
-                                        child: Center(
-                                          child: Text(
-                                            DemoLists.subjects[index],
                                           ),
-                                        ),
-                                      );
-                                    }),
-                              ),
-                              SizedBox(height: 10),
-                              ElevatedButton(
-                                  onPressed: () {
-                                    showModelSheet();
-                                  },
-                                  child: Text('Add Subject')),
-                              SizedBox(height: 10),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  );
-                }),
-          )
-        ],
+                                        );
+                                      }),
+                                ),
+                                SizedBox(height: 10),
+                                ElevatedButton(
+                                    onPressed: () {
+                                      showModelSheet();
+                                    },
+                                    child: Text('Add Subject')),
+                                SizedBox(height: 10),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  }),
+            )
+          ],
+        ),
       ),
     );
   }

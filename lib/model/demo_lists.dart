@@ -1,7 +1,8 @@
-import 'package:prime_academy/exams/exams_screen.dart';
 import 'package:prime_academy/model/schedule.dart';
+import 'package:prime_academy/screens/exams/exams_screen.dart';
 import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
 import 'package:prime_academy/screens/homework/homework_screen.dart';
+import 'package:prime_academy/screens/level_upgrade/level_upgrade_screen.dart';
 import 'package:prime_academy/screens/levels/levels_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
 import 'package:prime_academy/screens/payment/payment_screen.dart';
@@ -23,10 +24,10 @@ class DemoLists {
     'Examination Schedule',
     'Home Work',
     'Exams',
+    'Student Level',
     'exam correction',
     'Exam Results',
     'Student Rate',
-    'Student Level',
     'Attendance',
   ];
 
@@ -41,6 +42,7 @@ class DemoLists {
     ExamsScheduleScreen.routeName,
     HomeworkScreen.routeName,
     ExamsScreen.routeName,
+    LevelUpgradeScreen.routeName,
   ];
 
   ///icons
@@ -55,7 +57,7 @@ class DemoLists {
     'assets/icons/halloween.png',
     'assets/icons/homework.png',
     'assets/icons/exam.png',
-    'assets/images/prime_logo.jpg',
+    'assets/icons/star.png',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
     'assets/images/prime_logo.jpg',
@@ -139,7 +141,7 @@ class DemoLists {
         notes: 'Schedule 1 note here'),
     Schedule(
         id: '',
-        imgUrl: 'assets/images/prime_logo.jpg',
+        imgUrl: 'assets/images/student_schedule.png',
         date: '12-12-2012',
         notes: 'Schedule 2 note here'),
     Schedule(
@@ -149,7 +151,7 @@ class DemoLists {
         notes: 'Schedule 3 note here'),
     Schedule(
         id: '',
-        imgUrl: 'assets/images/prime_logo.jpg',
+        imgUrl: 'assets/images/student_schedule.png',
         date: '12-12-2012',
         notes: 'Schedule 4 note here'),
     Schedule(
@@ -167,7 +169,7 @@ class DemoLists {
         notes: 'Schedule 1 note here'),
     Schedule(
         id: '',
-        imgUrl: 'assets/images/prime_logo.jpg',
+        imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
         notes: 'Schedule 2 note here'),
     Schedule(
@@ -177,7 +179,7 @@ class DemoLists {
         notes: 'Schedule 3 note here'),
     Schedule(
         id: '',
-        imgUrl: 'assets/images/prime_logo.jpg',
+        imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
         notes: 'Schedule 4 note here'),
     Schedule(
@@ -213,5 +215,12 @@ class DemoLists {
         imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
         notes: 'Schedule 5 note here'),
+  ];
+
+
+  ///Question Types
+  static const List<String> questionTypes = [
+    'CHOOSE THE CORRECT',
+    "TRUE OR FALSE"
   ];
 }

@@ -13,7 +13,7 @@ class MainButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
-          backgroundColor: bgColor ?? Theme.of(context).primaryColor,
+          backgroundColor: bgColor ?? Colors.blue,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),

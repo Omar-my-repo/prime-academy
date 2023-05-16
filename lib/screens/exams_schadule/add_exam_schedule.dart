@@ -34,6 +34,7 @@ class _AddExamScheduleState extends State<AddExamSchedule> {
                 child: ListView.separated(
                     itemCount: DemoLists.levels.length,
                     scrollDirection: Axis.horizontal,
+                    padding: EdgeInsets.symmetric(horizontal: 2),
                     separatorBuilder: (context, index) => SizedBox(width: 10),
                     itemBuilder: (context, index) {
                       return Center(
@@ -53,7 +54,10 @@ class _AddExamScheduleState extends State<AddExamSchedule> {
               SizedBox(height: 10),
               Text(
                 'Notes',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black54),
               ),
               SizedBox(height: 4),
               CustomTextField(

@@ -24,17 +24,18 @@ class MonthCard extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 8),
             decoration: BoxDecoration(
                 color:
-                    isSelected ? Colors.deepOrange[400] : Colors.redAccent[100],
+                    // isSelected ? Colors.deepOrange[400] : Colors.redAccent[100],
+                    isSelected
+                        ? Colors.redAccent[100]
+                        : Colors.orange.withOpacity(.5),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   bottomRight: Radius.circular(12),
                   bottomLeft: Radius.circular(12),
                 ),
                 border: Border.all(
-                  width: isSelected ? 3 : 0,
-                  color: isSelected
-                      ? Theme.of(context).primaryColor
-                      : Colors.white,
+                  width: isSelected ? 0 : 0,
+                  color: isSelected ? Colors.black26 : Colors.white,
                 )),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

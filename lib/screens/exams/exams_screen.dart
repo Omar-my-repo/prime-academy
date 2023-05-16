@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
+import 'package:prime_academy/screens/exams/add_exam_screen.dart';
+import 'package:prime_academy/screens/exams/component/all_questions_screen.dart';
 import 'package:prime_academy/shared/widgets/level_card.dart';
-import 'package:prime_academy/shared/widgets/main_button.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class ExamsScreen extends StatefulWidget {
@@ -20,17 +21,18 @@ class _ExamsScreenState extends State<ExamsScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ScreenTitle('Exams'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
               child: ListView.separated(
                   itemCount: DemoLists.levels.length,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   scrollDirection: Axis.horizontal,
                   separatorBuilder: (context, index) => SizedBox(width: 10),
                   itemBuilder: (context, index) {
@@ -52,12 +54,14 @@ class _ExamsScreenState extends State<ExamsScreen> {
               height: 40,
               child: ListView.separated(
                   itemCount: DemoLists.subjects.length,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   scrollDirection: Axis.horizontal,
                   separatorBuilder: (context, index) => SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
                       child: LevelCard(
                         levelName: DemoLists.subjects[index],
+                        bgColor: Colors.orange.withOpacity(.5),
                         isSelected: selectedSubject == index,
                         onTab: () {
                           setState(() {
@@ -68,15 +72,15 @@ class _ExamsScreenState extends State<ExamsScreen> {
                     );
                   }),
             ),
-            SizedBox(height: 10),
+            Divider(thickness: 1),
             Expanded(
               child: ListView.separated(
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.only(top: 10, bottom: 80),
                   itemCount: DemoLists.homeworkSchedule.length,
-                  separatorBuilder: (context, index) => SizedBox(height: 20),
+                  separatorBuilder: (context, index) => SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return Card(
-                      elevation: 5,
+                      elevation: 2,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Column(
@@ -132,11 +136,18 @@ class _ExamsScreenState extends State<ExamsScreen> {
                               ],
                             ),
                             SizedBox(height: 10),
-                            SizedBox(
-                              width: double.infinity,
-                              child: MainButton(text: 'Details', onTap: () {}),
-                            ),
-                            SizedBox(height: 14),
+                            Align(
+                                alignment: Alignment.centerRight,
+                                child: ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllQuestionsScreen()));
+                                    },
+                                    child: Text('Details'))),
+                            SizedBox(height: 4),
                           ],
                         ),
                       ),
@@ -148,7 +159,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          //Navigator.pushNamed(context, AddHomework.routeName);
+          Navigator.pushNamed(context, AddExamScreen.routeName);
         },
         child: Icon(Icons.add),
       ),

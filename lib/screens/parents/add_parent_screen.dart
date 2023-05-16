@@ -30,7 +30,7 @@ class _AddParentScreenState extends State<AddParentScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ScreenTitle('Add New Parent'),
             const SizedBox(height: 10),
             Expanded(

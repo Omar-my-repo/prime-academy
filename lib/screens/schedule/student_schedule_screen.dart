@@ -20,17 +20,18 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ScreenTitle('Schedule'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
               child: ListView.separated(
                   itemCount: DemoLists.levels.length,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   scrollDirection: Axis.horizontal,
                   separatorBuilder: (context, index) => SizedBox(width: 10),
                   itemBuilder: (context, index) {
@@ -55,7 +56,7 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
                   separatorBuilder: (contex, index) => SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return Card(
-                      elevation: 5,
+                      elevation: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +66,7 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => FullScreenImage(
-                                      imgUrl: DemoLists
+                                          imgUrl: DemoLists
                                               .studentsSchedule[index].imgUrl,
                                         ))),
                             child: SizedBox(
@@ -86,13 +87,16 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
                               children: [
                                 Text(
                                   DemoLists.studentsSchedule[index].date,
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.blueGrey,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(height: 4),
                                 Text(DemoLists.studentsSchedule[index].notes,
                                     style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)),
+                                      fontSize: 16,
+                                    )),
                               ],
                             ),
                           ),

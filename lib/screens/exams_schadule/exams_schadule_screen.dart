@@ -20,11 +20,11 @@ class _ExamsScheduleScreenState extends State<ExamsScheduleScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ScreenTitle('Examination Schedule'),
             SizedBox(height: 10),
             SizedBox(
@@ -32,6 +32,7 @@ class _ExamsScheduleScreenState extends State<ExamsScheduleScreen> {
               child: ListView.separated(
                   itemCount: DemoLists.levels.length,
                   scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   separatorBuilder: (context, index) => SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
@@ -55,7 +56,7 @@ class _ExamsScheduleScreenState extends State<ExamsScheduleScreen> {
                   separatorBuilder: (context, index) => SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return Card(
-                      elevation: 5,
+                      elevation: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,13 +87,16 @@ class _ExamsScheduleScreenState extends State<ExamsScheduleScreen> {
                               children: [
                                 Text(
                                   DemoLists.examSchedule[index].date,
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.blueGrey,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(height: 4),
                                 Text(DemoLists.examSchedule[index].notes,
                                     style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)),
+                                      fontSize: 16,
+                                    )),
                               ],
                             ),
                           ),

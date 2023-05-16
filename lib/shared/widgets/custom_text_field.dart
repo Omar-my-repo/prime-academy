@@ -36,10 +36,14 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       validator: validator,
       maxLines: maxLines ?? 1,
+      // minLines: 1,
+
       obscureText: obscureText,
-      keyboardType: textInputType ?? TextInputType.text,
+      keyboardType: textInputType ?? TextInputType.multiline,
       onChanged: onChange,
       enabled: enabled,
+      // focusNode: FocusNode(),
+
       decoration: InputDecoration(
         label: label == null ? null : Text(label!),
         hintText: hint,

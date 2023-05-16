@@ -17,7 +17,7 @@ class _PaidScreenState extends State<PaidScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,6 +26,7 @@ class _PaidScreenState extends State<PaidScreen> {
             height: 40,
             child: ListView.separated(
                 itemCount: DemoLists.levels.length,
+                padding: EdgeInsets.symmetric(horizontal: 2),
                 scrollDirection: Axis.horizontal,
                 separatorBuilder: (context, index) => SizedBox(width: 10),
                 itemBuilder: (context, index) {
@@ -48,6 +49,7 @@ class _PaidScreenState extends State<PaidScreen> {
             child: ListView.separated(
                 itemCount: DemoLists.monthsShortcuts.length,
                 scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.symmetric(horizontal: 2),
                 separatorBuilder: (context, index) => SizedBox(width: 10),
                 itemBuilder: (context, index) {
                   return Center(
@@ -70,10 +72,10 @@ class _PaidScreenState extends State<PaidScreen> {
               // shrinkWrap: true,
               itemCount: 30,
               // physics: NeverScrollableScrollPhysics(),
-              separatorBuilder: (context, index) => SizedBox(height: 10),
+              separatorBuilder: (context, index) => SizedBox(height: 4),
               itemBuilder: (context, index) {
                 return Card(
-                  elevation: 4,
+                  elevation: 2,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
