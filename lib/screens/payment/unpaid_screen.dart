@@ -130,7 +130,7 @@ class _UnPaidScreenState extends State<UnPaidScreen> {
                             SizedBox(height: 12),
                           ],
                         ),
-                        ElevatedButton(onPressed: () {}, child: Text('Pay'))
+                        ElevatedButton(onPressed: () {}, child: Text('ادفع'))
                         // MainButton(
                         //     text: 'Pay',
                         //     bgColor:

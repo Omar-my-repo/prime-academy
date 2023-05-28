@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
+import 'package:prime_academy/shared/style/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = 'homeScreen';
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                         width: double.infinity,
                         height: 220,
                         decoration: BoxDecoration(
-                          color: Color(0xff5aa6c8),
+                          color: MyColors.homeBgColor,
                           // color: Colors.lightBlue.withOpacity(.3),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(30),
@@ -51,10 +52,11 @@ class HomeScreen extends StatelessWidget {
                             left: 20,
                           ),
                           child: Text(
-                            'Welcome to our educational center',
+                            'مرحباً بكم\nمعاَ نصنع مستقبل أفضل',
                             style: TextStyle(
                                 fontSize: 28,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
+                                height: 1,
                                 color: Colors.white),
                           ),
                         ),
@@ -65,6 +67,7 @@ class HomeScreen extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 1,
                           child: Center(
                             child: Card(
+                              elevation: 2,
                               clipBehavior: Clip.hardEdge,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
@@ -75,20 +78,20 @@ class HomeScreen extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     // color: Color(0xffd1ecea),
                                     // color: Color(0xfffff4de),
-                                    color: Colors.orange.withOpacity(.15),
+                                    color: Colors.orange.withOpacity(.1),
                                     borderRadius: BorderRadius.circular(30)
                                     // image: DecorationImage(
-                                    //   image: AssetImage('assets/images/prime_logo.jpg'),
-                                    //   fit: BoxFit.fill,
-                                    // ),
-                                    ),
+                                  //   image: AssetImage('assets/images/prime_logo.jpg'),
+                                  //   fit: BoxFit.fill,
+                                  // ),
+                                ),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
+                                      MainAxisAlignment.spaceAround,
                                       children: [
                                         CircleAvatar(
                                           backgroundImage: AssetImage(
@@ -108,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                                             Text(
                                               'مستر محمد الدهبي',
                                               style: TextStyle(
-                                                  fontSize: 22,
+                                                  fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black54),
                                             ),
@@ -177,7 +180,8 @@ class HomeScreen extends StatelessWidget {
                                 child: Text(
                                   DemoLists.homeContent[index],
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 17,
+                                      height: 1.3,
                                       fontWeight: FontWeight.w500),
                                   textAlign: TextAlign.center,
                                 ),

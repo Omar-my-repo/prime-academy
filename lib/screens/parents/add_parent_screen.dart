@@ -31,7 +31,7 @@ class _AddParentScreenState extends State<AddParentScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Add New Parent'),
+            ScreenTitle('إضافة ولي أمر'),
             const SizedBox(height: 10),
             Expanded(
                 child: SingleChildScrollView(
@@ -44,8 +44,7 @@ class _AddParentScreenState extends State<AddParentScreen> {
                     CustomTextField(
                       controller: _firstNameController,
                       validator: (value) {},
-                      hint: 'Enter Parent First Name',
-                      label: 'First Name',
+                      label: 'الاسم الأول',
                     ),
                     const SizedBox(height: 16),
                     Row(
@@ -54,8 +53,7 @@ class _AddParentScreenState extends State<AddParentScreen> {
                           child: CustomTextField(
                             controller: _middleNameController,
                             validator: (value) {},
-                            hint: 'Enter Parent Middle Name',
-                            label: 'Middle Name',
+                            label: 'الاسم الأوسط',
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -63,8 +61,8 @@ class _AddParentScreenState extends State<AddParentScreen> {
                           child: CustomTextField(
                             controller: _lastNameController,
                             validator: (value) {},
-                            hint: 'Enter Parent Last Name',
-                            label: 'Last Name',
+                            // hint: 'Enter Parent Last Name',
+                            label: 'الاسم الاخير',
                           ),
                         ),
                       ],
@@ -74,8 +72,8 @@ class _AddParentScreenState extends State<AddParentScreen> {
                       controller: _addressController,
                       textInputType: TextInputType.number,
                       validator: (value) {},
-                      hint: 'Enter Parent Address',
-                      label: 'Address',
+                      // hint: 'Enter Parent Address',
+                      label: 'العنوان',
                     ),
                     const SizedBox(height: 16),
                     CustomTextField(
@@ -88,22 +86,22 @@ class _AddParentScreenState extends State<AddParentScreen> {
                         // }
                         // return null;
                       },
-                      hint: 'Enter Parent phone number',
-                      label: 'Phone',
+                      // hint: 'Enter Parent phone number',
+                      label: 'رقم الهاتف',
                     ),
                     SizedBox(height: 14),
                     CustomTextField(
                       controller: _userNameController,
                       validator: (value) {},
-                      hint: 'Enter Parent user name',
-                      label: 'User Name',
+                      // hint: 'Enter Parent user name',
+                      label: 'اسم المستخدم',
                     ),
                     const SizedBox(height: 16),
                     CustomTextField(
                       controller: _passwordController,
                       validator: (value) {},
-                      hint: 'Enter Parent Password',
-                      label: 'Password',
+                      // hint: 'Enter Parent Password',
+                      label: 'كلمة المرور',
                       //obscureText: isObscure,
                       // suffixIcon: IconButton(
                       //     onPressed: () {
@@ -117,8 +115,8 @@ class _AddParentScreenState extends State<AddParentScreen> {
                     CustomTextField(
                       controller: _confirmPasswordController,
                       validator: (value) {},
-                      hint: 'Confirm Parent Password',
-                      label: 'Confirm Password',
+                      // hint: 'Confirm Parent Password',
+                      label: 'تأكيد كلمة المرور',
                       //obscureText: isObscure,
                       // suffixIcon: IconButton(
                       //     onPressed: () {
@@ -133,9 +131,9 @@ class _AddParentScreenState extends State<AddParentScreen> {
                       onTap: () {
                         // validForm();
                       },
-                      text: 'Create Account',
+                      text: 'حفظ البيانات',
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),

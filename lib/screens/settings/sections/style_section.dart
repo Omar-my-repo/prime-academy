@@ -59,7 +59,7 @@ class StyleSection extends StatelessWidget {
       //       });
       // },
       child: CustomListTile(
-        title: 'Style',
+        title: 'المظهر',
         leading: Icon(Icons.style),
       ),
     );

@@ -24,7 +24,7 @@ class _SubjectsScreenState extends State<SubjectsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('All Subjects'),
+            ScreenTitle('المواد الدراسية'),
             const SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
@@ -81,7 +81,7 @@ class _SubjectsScreenState extends State<SubjectsScreen> {
                                     onPressed: () {
                                       showModelSheet();
                                     },
-                                    child: Text('Add Subject')),
+                                    child: Text('إضافة مادة')),
                                 SizedBox(height: 10),
                               ],
                             ),
@@ -123,17 +123,17 @@ class _SubjectsScreenState extends State<SubjectsScreen> {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Add Subject',
+                  'إضافة مادة دراسية',
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(height: 10),
                 CustomTextField(
                   controller: _subjectController,
                   validator: (value) {},
-                  hint: 'add new Subject',
+                  label: 'اكتب اسم المادة',
                 ),
                 Spacer(),
-                MainButton(text: 'Add', onTap: () {}),
+                MainButton(text: 'حفظ البيانات', onTap: () {}),
                 SizedBox(
                   height: 30,
                 )

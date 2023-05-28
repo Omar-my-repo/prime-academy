@@ -21,6 +21,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
   DateTime examDate = DateTime.now();
   TimeOfDay examTime = TimeOfDay.now();
   TextEditingController _examDuration = TextEditingController();
+  TextEditingController _examType = TextEditingController();
   String _dropDownValue = DemoLists.questionTypes[0];
   int currentStep = 0;
 
@@ -42,7 +43,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 10),
-              ScreenTitle('Add Exam'),
+              ScreenTitle('إضافة اختبار'),
               Divider(thickness: 1),
               Stepper(
                 steps: getSteps(),
@@ -97,18 +98,18 @@ class _AddExamScreenState extends State<AddExamScreen> {
       Step(
         isActive: currentStep >= 0,
         state: currentStep > 0 ? StepState.complete : StepState.indexed,
-        title: Text('Class and Subject'),
+        title: Text(' الصف والمادة'),
         content: firstStepContent(),
       ),
       Step(
         isActive: currentStep >= 1,
         state: currentStep > 1 ? StepState.complete : StepState.indexed,
-        title: Text('Date and Time'),
+        title: Text('الوقت والتاريخ'),
         content: secondStepContent(),
       ),
       Step(
         isActive: currentStep >= 2,
-        title: Text('Questions'),
+        title: Text('الأسئلة'),
         content: thirdStepContent(),
       ),
     ];
@@ -119,7 +120,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Choose Question Type",
+          "اختر نوع السؤال",
           style: TextStyle(color: Colors.grey[600]),
         ),
         SizedBox(height: 4),
@@ -171,7 +172,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
                         MaterialPageRoute(
                             builder: (context) => AddMultipleChooseQScreen()));
                 },
-                child: Text('Add Question'),
+                child: Text('إضافة سؤال'),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green.withOpacity(.5)),
               ),
@@ -187,7 +188,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
                   //       return MultipleChooseScreen();
                   //     });
                 },
-                child: Text('Show All'),
+                child: Text('جميع الاسئلة'),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange.withOpacity(.5)),
               ),
@@ -202,7 +203,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('select date',
+        Text('اخنر التاريخ',
             style: TextStyle(fontSize: 16, color: Colors.grey[600])),
         SizedBox(height: 4),
         InkWell(
@@ -210,9 +211,9 @@ class _AddExamScreenState extends State<AddExamScreen> {
               showAndSelectDate(context);
             },
             child: DateTimeWidget(examDate.toString().substring(0, 10))),
-        SizedBox(height: 20),
+        SizedBox(height: 10),
         Text(
-          'select time',
+          'اختر الوقت',
           style: TextStyle(fontSize: 16, color: Colors.grey[600]),
         ),
         SizedBox(height: 4),
@@ -224,14 +225,14 @@ class _AddExamScreenState extends State<AddExamScreen> {
           child: DateTimeWidget(examTime.format(context).toString()),
         ),
         SizedBox(height: 20),
-        Text(
-          'exam duration',
-          style: TextStyle(fontSize: 16, color: Colors.grey[600]),
-        ),
+        // Text(
+        //   'مدة الامتحان',
+        //   style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+        // ),
         SizedBox(height: 4),
         CustomTextField(
           controller: _examDuration,
-          hint: 'Set the duration of the exam',
+          hint: 'اضف مدة الامتحان',
           validator: (value) {},
         ),
       ],
@@ -241,7 +242,6 @@ class _AddExamScreenState extends State<AddExamScreen> {
   Widget firstStepContent() {
     return Column(
       children: [
-        SizedBox(height: 10),
         SizedBox(
           height: 40,
           child: ListView.separated(
@@ -291,6 +291,11 @@ class _AddExamScreenState extends State<AddExamScreen> {
               }),
         ),
         SizedBox(height: 20),
+        CustomTextField(
+          controller: _examType,
+          validator: (value) {},
+          hint: 'اضف مناسبة الامتحان',
+        ),
       ],
     );
   }

@@ -37,7 +37,7 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-            ScreenTitle('Add New Teacher'),
+            ScreenTitle('إضافة معلم'),
             const SizedBox(height: 10),
             Expanded(
                 child: SingleChildScrollView(
@@ -50,8 +50,8 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                     CustomTextField(
                       controller: _firstNameController,
                       validator: (value) {},
-                      hint: 'Enter Teacher First Name',
-                      label: 'First Name',
+                      // hint: 'Enter Teacher First Name',
+                      label: 'الاسم الأول',
                     ),
                     const SizedBox(height: 10),
                     Row(
@@ -60,8 +60,8 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                           child: CustomTextField(
                             controller: _middleNameController,
                             validator: (value) {},
-                            hint: 'Enter Teacher Middle Name',
-                            label: 'Middle Name',
+                            // hint: 'Enter Teacher Middle Name',
+                            label: 'الاسم الأوسط',
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -69,8 +69,8 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                           child: CustomTextField(
                             controller: _lastNameController,
                             validator: (value) {},
-                            hint: 'Enter Teacher Last Name',
-                            label: 'Last Name',
+                            // hint: 'Enter Teacher Last Name',
+                            label: 'الاسم الأخير',
                           ),
                         ),
                       ],
@@ -80,8 +80,8 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                       controller: _addressController,
                       textInputType: TextInputType.number,
                       validator: (value) {},
-                      hint: 'Enter Teacher Address',
-                      label: 'Address',
+                      // hint: 'Enter Teacher Address',
+                      label: 'العنوان',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
@@ -94,24 +94,24 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                         // }
                         // return null;
                       },
-                      hint: 'Enter Teacher phone number',
-                      label: 'Phone',
+                      // hint: 'Enter Teacher phone number',
+                      label: 'رقم الهاتف',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: _userNameController,
                       enabled: false,
                       validator: (value) {},
-                      hint: 'Enter Teacher user name',
-                      label: 'User Name',
+                      // hint: 'Enter Teacher user name',
+                      label: 'اسم المستخدم',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: _passwordController,
                       enabled: false,
                       validator: (value) {},
-                      hint: 'Enter Teacher Password',
-                      label: 'Password',
+                      // hint: 'Enter Teacher Password',
+                      label: 'كلمة المرور',
                       //obscureText: isObscure,
                       // suffixIcon: IconButton(
                       //     onPressed: () {
@@ -127,8 +127,8 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                       enabled: false,
 
                       validator: (value) {},
-                      hint: 'Confirm Teacher Password',
-                      label: 'Confirm Password',
+                      // hint: 'Confirm Teacher Password',
+                      label: 'تأكيد كلمة المرور',
                       //obscureText: isObscure,
                       // suffixIcon: IconButton(
                       //     onPressed: () {
@@ -142,7 +142,7 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                     Divider(thickness: 1),
                     const SizedBox(height: 10),
                     Text(
-                      'Choose Teatcher Level',
+                      'اختر الصفوف الخاصة بالمعلم',
                       style: TextStyle(fontSize: 18),
                     ),
                     const SizedBox(height: 10),
@@ -181,7 +181,7 @@ class _AddTeacherScreenState extends State<AddTeacherScreen> {
                       onTap: () {
                         // validForm();
                       },
-                      text: 'Create Account',
+                      text: 'حفظ البيانات',
                     ),
                     const SizedBox(height: 60),
                   ],

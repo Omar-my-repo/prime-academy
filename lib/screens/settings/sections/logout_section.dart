@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../login/login_screen.dart';
-
 class LogoutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context, rootNavigator: true)
-            .pushNamedAndRemoveUntil(LoginScreen.routeName, (route) => false);
+        // Navigator.of(context, rootNavigator: true)
+        //     .pushNamedAndRemoveUntil(LoginScreen.routeName, (route) => false);
       },
       child: Container(
-        color: Colors.redAccent[100],
+        color: Colors.redAccent,
         child: ListTile(
           leading: const Icon(
             Icons.logout,
@@ -21,7 +19,7 @@ class LogoutSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Logout",
+                "تسجيل الخروج",
                 style: Theme.of(context)
                     .textTheme
                     .subtitle1!

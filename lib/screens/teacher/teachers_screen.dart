@@ -25,7 +25,7 @@ class _TeachersScreenState extends State<TeachersScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Teachers'),
+            ScreenTitle('المعلمين'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -60,7 +60,7 @@ class _TeachersScreenState extends State<TeachersScreen> {
                     return Card(
                       elevation: 2,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.only(right: 10.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,

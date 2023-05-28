@@ -8,7 +8,7 @@ class RateUS extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
-      child: CustomListTile(title: 'Rate Us', leading: Icon(Icons.star)),
+      child: CustomListTile(title: 'تقييم التطبيق', leading: Icon(Icons.star)),
     );
   }
 }

@@ -23,7 +23,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Student Level Upgrade'),
+            ScreenTitle('نقل الطلبة'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -83,7 +83,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             SizedBox(height: 6),
                             Row(
                               children: [
-                                Text('Degree',
+                                Text('الدرجة: ',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
@@ -95,7 +95,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             SizedBox(height: 6),
                             Row(
                               children: [
-                                Text('Percentage',
+                                Text('النسبة المؤية: ',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
@@ -107,7 +107,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             SizedBox(height: 6),
                             Row(
                               children: [
-                                Text('Attendance',
+                                Text('نسبة الحضور',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
@@ -119,7 +119,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             SizedBox(height: 6),
                             Row(
                               children: [
-                                Text('Behavior',
+                                Text('السلوك: ',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
@@ -133,7 +133,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             SizedBox(height: 6),
                             Row(
                               children: [
-                                Text('Total Rate',
+                                Text('التقييم الكلي: ',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
@@ -144,9 +144,9 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             ),
                             // SizedBox(height: 12),
                             Align(
-                              alignment: Alignment.centerRight,
+                              alignment: Alignment.centerLeft,
                               child: ElevatedButton(
-                                  onPressed: () {}, child: Text('Upgrade')),
+                                  onPressed: () {}, child: Text('نقل الطالب')),
                             ),
                             SizedBox(height: 4),
                           ],

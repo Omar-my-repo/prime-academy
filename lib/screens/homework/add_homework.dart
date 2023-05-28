@@ -31,7 +31,7 @@ class _AddHomeworkState extends State<AddHomework> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 10),
-              ScreenTitle('Add Homework'),
+              ScreenTitle('إضافة واجب منزلي'),
               SizedBox(height: 10),
               SizedBox(
                 height: 40,
@@ -81,7 +81,7 @@ class _AddHomeworkState extends State<AddHomework> {
               SizedBox(height: 10),
               Row(
                 children: [
-                  Text('Select Homework date:',
+                  Text('إختر تاريخ الواجب المنزلي',
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -98,19 +98,19 @@ class _AddHomeworkState extends State<AddHomework> {
                 ],
               ),
               SizedBox(height: 10),
-              Text(
-                'Notes',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
-              ),
+              // Text(
+              //   'Notes',
+              //   style: TextStyle(
+              //       fontSize: 18,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.black54),
+              // ),
               SizedBox(height: 4),
               CustomTextField(
                 controller: noteController,
                 maxLines: 3,
                 validator: (value) {},
-                hint: 'Write your notes',
+                hint: 'ملاحظات عن الواجب المنزلي',
               ),
               SizedBox(height: 30),
               Stack(
@@ -153,7 +153,7 @@ class _AddHomeworkState extends State<AddHomework> {
               SizedBox(height: 50),
               SizedBox(
                 width: double.infinity,
-                child: MainButton(text: 'Upload Schedule', onTap: () {}),
+                child: MainButton(text: 'حفظ البيانات', onTap: () {}),
               ),
               SizedBox(height: 20),
             ],

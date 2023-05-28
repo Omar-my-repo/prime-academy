@@ -27,7 +27,7 @@ class _AddExamScheduleState extends State<AddExamSchedule> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 10),
-              ScreenTitle('Add Exam Schedule'),
+              ScreenTitle('إضافة جدول للامتحانت'),
               SizedBox(height: 10),
               SizedBox(
                 height: 40,
@@ -52,19 +52,19 @@ class _AddExamScheduleState extends State<AddExamSchedule> {
               ),
               Divider(thickness: 1),
               SizedBox(height: 10),
-              Text(
-                'Notes',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
-              ),
+              // Text(
+              //   'Notes',
+              //   style: TextStyle(
+              //       fontSize: 18,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.black54),
+              // ),
               SizedBox(height: 4),
               CustomTextField(
                 controller: noteController,
                 maxLines: 3,
                 validator: (value) {},
-                hint: 'Write your notes',
+                hint: 'اكتب ملاحظاتك عن جدول الامتحانات هنا',
               ),
               SizedBox(height: 30),
               Stack(
@@ -107,7 +107,7 @@ class _AddExamScheduleState extends State<AddExamSchedule> {
               SizedBox(height: 50),
               SizedBox(
                 width: double.infinity,
-                child: MainButton(text: 'Upload Schedule', onTap: () {}),
+                child: MainButton(text: 'حفظ البيانات', onTap: () {}),
               ),
               SizedBox(height: 20),
             ],

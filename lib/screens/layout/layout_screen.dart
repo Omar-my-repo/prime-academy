@@ -70,19 +70,25 @@ class _LayoutScreenState extends State<LayoutScreen> {
     return [
       PersistentBottomNavBarItem(
         icon: Icon(Icons.message),
-        title: ("Chat"),
+        title: (" الرسائل"),
+        textStyle:
+            TextStyle(height: 1, fontSize: 14, fontWeight: FontWeight.w600),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.home),
-        title: ("Home"),
+        title: (" الرئيسة"),
+        textStyle:
+            TextStyle(height: 1, fontSize: 14, fontWeight: FontWeight.w600),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.settings),
-        title: ("Settings"),
+        title: (" الإعدادات"),
+        textStyle:
+            TextStyle(height: 1, fontSize: 14, fontWeight: FontWeight.w600),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),

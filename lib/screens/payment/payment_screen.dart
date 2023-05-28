@@ -15,7 +15,7 @@ class PaymentScreen extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColor,
           iconTheme: IconThemeData(color: Colors.white),
           title: Text(
-            'Payments',
+            'المدفوعات',
             style: TextStyle(
               color: Theme.of(context).colorScheme.onError,
             ),
@@ -24,11 +24,11 @@ class PaymentScreen extends StatelessWidget {
           bottom: const TabBar(
             tabs: [
               Tab(
-                text: 'Unpaid',
+                text: 'غير مدفوع',
                 icon: Icon(Icons.close_outlined),
               ),
               Tab(
-                text: 'Paid',
+                text: 'مدفوع',
                 icon: Icon(Icons.check),
               ),
             ],

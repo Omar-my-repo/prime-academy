@@ -62,7 +62,7 @@ class LanguageSection extends StatelessWidget {
       //       });
       // },
       child: CustomListTile(
-        title: 'Language',
+        title: 'اللغة',
         leading: Icon(Icons.language),
       ),
     );

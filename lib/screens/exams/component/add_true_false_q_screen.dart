@@ -12,85 +12,110 @@ class AddTrueFalseQScreen extends StatefulWidget {
 
 class _AddTrueFalseQScreenState extends State<AddTrueFalseQScreen> {
   TextEditingController _titleController = TextEditingController();
+  TextEditingController _degreeController = TextEditingController();
   String? modelAnswer;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('True Or False Question')),
+      appBar: AppBar(
+        title: Text('صواب ام خطأ'),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // SizedBox(height: 20),
-            // ScreenTitle('Add True Or False Question'),
-            SizedBox(height: 20),
-            Text(
-              'Add title',
-              maxLines: 3,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 4),
-            CustomTextField(
-              controller: _titleController,
-              hint: 'question title here',
-              maxLines: 3,
-              validator: (value) {},
-            ),
-            SizedBox(height: 40),
-            Text('Model Answe',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            SizedBox(height: 6),
-            Row(
-              children: [
-                Expanded(
-                  child: RadioListTile(
-                    title: Text('True'),
-                    value: 'True',
-                    groupValue: modelAnswer,
-                    onChanged: (value) {
-                      setState(() {
-                        modelAnswer = value.toString();
-                      });
-                    },
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // SizedBox(height: 20),
+              // ScreenTitle('Add True Or False Question'),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'رأس السؤال',
+                    maxLines: 3,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                ),
-                SizedBox(width: 10),
-                Expanded(
-                  child: RadioListTile(
-                    title: Text('False'),
-                    value: 'False',
-                    groupValue: modelAnswer,
-                    onChanged: (value) {
-                      setState(() {
-                        modelAnswer = value.toString();
-                      });
-                    },
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 40),
-            SizedBox(
-              width: double.infinity,
-              child: MainButton(
-                text: 'Save Question',
-                onTap: () {
-                  //should check first  if _cotrollers are validate (has data)
-                  print('==========$modelAnswer*A');
-                  if (modelAnswer != null && modelAnswer!.isNotEmpty) {
-                    questions.add(TrueOrFalseQuestion(
-                        title: _titleController.text,
-                        modelAnswer: modelAnswer!));
-                    Navigator.pop(context);
-                  } else {
-                    //show alert that model answer not selected message
-                  }
-                },
+                  Row(
+                    children: [
+                      Text('الدرجة'),
+                      SizedBox(width: 6),
+                      SizedBox(
+                          width: 40,
+                          child: CustomTextField(
+                            controller: _degreeController,
+                            validator: (value) {},
+                            hint: '',
+                            textInputType: TextInputType.number,
+                          ))
+                    ],
+                  )
+                ],
               ),
-            )
-          ],
+              SizedBox(height: 4),
+              CustomTextField(
+                controller: _titleController,
+                hint: 'اض السؤال هنا',
+                maxLines: 3,
+                validator: (value) {},
+              ),
+              SizedBox(height: 40),
+              Text('الاجابة الصحيحة',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              SizedBox(height: 6),
+              Row(
+                children: [
+                  Expanded(
+                    child: RadioListTile(
+                      title: Text('صواب'),
+                      value: 'True',
+                      groupValue: modelAnswer,
+                      onChanged: (value) {
+                        setState(() {
+                          modelAnswer = value.toString();
+                        });
+                      },
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: RadioListTile(
+                      title: Text('خطأ'),
+                      value: 'False',
+                      groupValue: modelAnswer,
+                      onChanged: (value) {
+                        setState(() {
+                          modelAnswer = value.toString();
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 40),
+              SizedBox(
+                width: double.infinity,
+                child: MainButton(
+                  text: 'إضافة السؤال',
+                  onTap: () {
+                    //should check first  if _cotrollers are validate (has data)
+                    print('==========$modelAnswer*A');
+                    if (modelAnswer != null && modelAnswer!.isNotEmpty) {
+                      questions.add(TrueOrFalseQuestion(
+                          title: _titleController.text,
+                          modelAnswer: modelAnswer!));
+                      Navigator.pop(context);
+                    } else {
+                      //show alert that model answer not selected message
+                    }
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

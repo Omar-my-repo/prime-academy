@@ -24,7 +24,7 @@ class _LevelsScreenState extends State<LevelsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Educational Level'),
+            ScreenTitle('الصفوف الدراسية'),
             SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
@@ -34,7 +34,7 @@ class _LevelsScreenState extends State<LevelsScreen> {
                   return Card(
                     elevation: 2,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 16.0),
+                      padding: const EdgeInsets.only(right: 16.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -117,17 +117,17 @@ class _LevelsScreenState extends State<LevelsScreen> {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Add New Level',
+                  'إضافة صف دراسي جديد',
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(height: 10),
                 CustomTextField(
                   controller: _levelController,
                   validator: (value) {},
-                  hint: 'add new level',
+                  hint: 'اكتب اسم الصف',
                 ),
                 Spacer(),
-                MainButton(text: 'Add', onTap: () {}),
+                MainButton(text: 'حفظ البيانات', onTap: () {}),
                 SizedBox(
                   height: 30,
                 )

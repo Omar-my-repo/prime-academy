@@ -21,7 +21,7 @@ class _ParentsScreenState extends State<ParentsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Parents'),
+            ScreenTitle('أولياء الامور'),
             SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
@@ -34,7 +34,7 @@ class _ParentsScreenState extends State<ParentsScreen> {
                     return Card(
                       elevation: 2,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.only(right: 10.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,

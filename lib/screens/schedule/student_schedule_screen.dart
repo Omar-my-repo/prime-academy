@@ -25,7 +25,7 @@ class _StudentScheduleScreenState extends State<StudentScheduleScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Schedule'),
+            ScreenTitle('الجدول الدراسي'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,

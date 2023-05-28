@@ -11,6 +11,7 @@ class ScreenTitle extends StatelessWidget {
       title,
       style: TextStyle(
         fontSize: 24,
+        height: 1.2,
         fontWeight: FontWeight.bold,
         color: Colors.black.withOpacity(.7),
       ),

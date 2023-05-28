@@ -13,6 +13,7 @@ class AddMultipleChooseQScreen extends StatefulWidget {
 
 class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
   TextEditingController _titleController = TextEditingController();
+  TextEditingController _degreeController = TextEditingController();
   TextEditingController _answer1Controller = TextEditingController();
   TextEditingController _answer2Controller = TextEditingController();
   TextEditingController _answer3Controller = TextEditingController();
@@ -26,22 +27,45 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('True Or False Question')),
+      appBar: AppBar(
+        title: Text('الاختيار من متعدد'),
+        centerTitle: true,
+      ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 30, horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Add title',
-                maxLines: 3,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'رأس السؤال',
+                    maxLines: 3,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    children: [
+                      Text('الدرجة'),
+                      SizedBox(width: 6),
+                      SizedBox(
+                          width: 40,
+                          child: CustomTextField(
+                            controller: _degreeController,
+                            validator: (value) {},
+                            hint: '',
+                            textInputType: TextInputType.number,
+                          ))
+                    ],
+                  )
+                ],
               ),
               SizedBox(height: 4),
               CustomTextField(
                 controller: _titleController,
-                hint: 'question title here',
+                hint: 'اضف السؤال هنا',
                 maxLines: 3,
                 validator: (value) {},
               ),
@@ -51,7 +75,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                   Expanded(
                     child: CustomTextField(
                       controller: _answer1Controller,
-                      hint: 'First Choose',
+                      hint: 'الاختيار الاول',
                       onChange: (value) {
                         setState(() {
                           answer1 = value;
@@ -64,7 +88,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                   Expanded(
                     child: CustomTextField(
                       controller: _answer2Controller,
-                      hint: 'Second Choose',
+                      hint: 'الاختيار الثاني',
                       onChange: (value) {
                         setState(() {
                           answer2 = value;
@@ -81,7 +105,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                   Expanded(
                     child: CustomTextField(
                       controller: _answer3Controller,
-                      hint: 'Third Choose',
+                      hint: 'الاختيار الثالث',
                       onChange: (value) {
                         setState(() {
                           answer3 = value;
@@ -94,7 +118,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                   Expanded(
                     child: CustomTextField(
                       controller: _answer4Controller,
-                      hint: 'Fourth Choose',
+                      hint: 'الاختيار الرابع',
                       onChange: (value) {
                         setState(() {
                           answer4 = value;
@@ -106,7 +130,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                 ],
               ),
               SizedBox(height: 20),
-              Text('Model Answer',
+              Text('الاجابة الصحيحة',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               SizedBox(height: 6),
               Row(
@@ -171,7 +195,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
               SizedBox(
                 width: double.infinity,
                 child: MainButton(
-                  text: 'Save Question',
+                  text: 'إضافة السؤال',
                   onTap: () {
                     //should check first  if _cotrollers are validate (has data)
                     print('==========$modelAnswer*A');

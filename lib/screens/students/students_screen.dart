@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
+import 'package:prime_academy/screens/student_profile/student_profile_screen.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
 import 'package:prime_academy/shared/widgets/level_card.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
@@ -24,7 +25,7 @@ class _Students_ScreenState extends State<StudentsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Students'),
+            ScreenTitle('الطلاب'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -59,7 +60,7 @@ class _Students_ScreenState extends State<StudentsScreen> {
                     return Card(
                       elevation: 2,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.only(right: 10.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,6 +87,11 @@ class _Students_ScreenState extends State<StudentsScreen> {
                                   ],
                                 ),
                                 InkWell(
+                                  onTap: () {
+                                    Navigator.of(context, rootNavigator: true)
+                                        .pushNamed(
+                                            StudentProfileScreen.routeName);
+                                  },
                                   child: Container(
                                     padding: EdgeInsets.all(8),
                                     margin: EdgeInsets.symmetric(horizontal: 8),

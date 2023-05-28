@@ -29,7 +29,7 @@ class AllQuestionsScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Choose The Correct Answer',
+                        'سؤال الاختيار من متعدد',
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -89,7 +89,7 @@ class AllQuestionsScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'True Or False Questions',
+                        'سؤال صواب ام خطأ',
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,

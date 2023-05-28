@@ -17,7 +17,7 @@ class AboutSection extends StatelessWidget {
         //       });
         // },
         child: CustomListTile(
-      title: 'About Us',
+      title: 'عن التطبيق',
       leading: Icon(Icons.info),
     ));
   }

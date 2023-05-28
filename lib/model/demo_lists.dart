@@ -1,4 +1,5 @@
 import 'package:prime_academy/model/schedule.dart';
+import 'package:prime_academy/screens/exam_correction/exam_correction_screen.dart';
 import 'package:prime_academy/screens/exams/exams_screen.dart';
 import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
 import 'package:prime_academy/screens/homework/homework_screen.dart';
@@ -14,21 +15,21 @@ import 'package:prime_academy/screens/teacher/teachers_screen.dart';
 class DemoLists {
   ///home screen content and routes
   static const List<String> homeContent = [
-    'Students',
-    'Parents',
-    'Teachers',
-    'Subjects',
-    'Levels',
-    'Payment',
-    'Schedule',
-    'Examination Schedule',
-    'Home Work',
-    'Exams',
-    'Student Level',
-    'exam correction',
-    'Exam Results',
-    'Student Rate',
-    'Attendance',
+    'الطلاب',
+    'أولياء الأمور',
+    'المعلمين',
+    'المواد الدراسية',
+    'الصفوف الدراسية',
+    'المدفوعات',
+    'الجدول الدراسي',
+    'جدول الإمتحانات',
+    'الواجبات المنزلية',
+    'الإختبارات',
+    'نقل الطلبة',
+    'تصحيح الاختبارات',
+    'نتائج الإختبارات',
+    'تقييم الطلبة',
+    'الحضور',
   ];
 
   static const List<String> screens = [
@@ -43,6 +44,7 @@ class DemoLists {
     HomeworkScreen.routeName,
     ExamsScreen.routeName,
     LevelUpgradeScreen.routeName,
+    ExamCorrectionScreen.routeName,
   ];
 
   ///icons
@@ -87,10 +89,10 @@ class DemoLists {
   static List<String> levels = [
     'Kg1',
     'Kg2',
-    'Level One',
-    'Level Two',
-    'Level Three',
-    'Level Four'
+    'Junior One',
+    'Junior Two',
+    'Junior Three',
+    'Junior Four'
   ];
   static List<int> selectedLevels = [];
 
@@ -119,74 +121,74 @@ class DemoLists {
     'DECEMBER'
   ];
   static const List<String> monthsShortcuts = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-  ];
-
-  static List<Schedule> studentsSchedule = [
-    Schedule(
-        id: '',
-        imgUrl: 'assets/images/student_schedule.png',
-        date: '12-12-2012',
-        notes: 'Schedule 1 note here'),
-    Schedule(
-        id: '',
-        imgUrl: 'assets/images/student_schedule.png',
-        date: '12-12-2012',
-        notes: 'Schedule 2 note here'),
-    Schedule(
-        id: '',
-        imgUrl: 'assets/images/student_schedule.png',
-        date: '12-12-2012',
-        notes: 'Schedule 3 note here'),
-    Schedule(
-        id: '',
-        imgUrl: 'assets/images/student_schedule.png',
-        date: '12-12-2012',
-        notes: 'Schedule 4 note here'),
-    Schedule(
-        id: '',
-        imgUrl: 'assets/images/student_schedule.png',
-        date: '12-12-2012',
-        notes: 'Schedule 5 note here'),
+    'يناير',
+    'فبراير',
+    'مارس',
+    'ابريل',
+    'مايو',
+    'يونيو',
+    'يوليو',
+    'اغسطس',
+    'سبتمبر',
+    'اكتوبر',
+    'نوفمبر',
+    'ديسمبر'
   ];
 
   static List<Schedule> examSchedule = [
     Schedule(
         id: '',
-        imgUrl: 'assets/images/exam_schedule.jpg',
+        imgUrl: 'assets/images/student_schedule.png',
         date: '12-12-2012',
-        notes: 'Schedule 1 note here'),
+        notes: 'ملاحظات عن جدول الامتحانات 1'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/student_schedule.png',
+        date: '12-12-2012',
+        notes: 'ملاحظات عن جدول الامتحانات 2'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/student_schedule.png',
+        date: '12-12-2012',
+        notes: 'ملاحظات عن جدول الامتحانات 3'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/student_schedule.png',
+        date: '12-12-2012',
+        notes: 'ملاحظات عن جدول الامتحانات 4'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/student_schedule.png',
+        date: '12-12-2012',
+        notes: 'ملاحظات عن جدول الامتحانات 5'),
+  ];
+
+  static List<Schedule> studentsSchedule = [
     Schedule(
         id: '',
         imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
-        notes: 'Schedule 2 note here'),
+        notes: 'ملاحظات عن جدولنا الدراسي 1'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
-        notes: 'Schedule 3 note here'),
+        notes: 'ملاحظات عن جدولنا الدراسي 2'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
-        notes: 'Schedule 4 note here'),
+        notes: 'ملاحظات عن جدولنا الدراسي 3'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/exam_schedule.jpg',
         date: '12-12-2012',
-        notes: 'Schedule 5 note here'),
+        notes: 'ملاحظات عن جدولنا الدراسي 4'),
+    Schedule(
+        id: '',
+        imgUrl: 'assets/images/exam_schedule.jpg',
+        date: '12-12-2012',
+        notes: 'ملاحظات عن جدولنا الدراسي 5'),
   ];
 
   static List<Schedule> homeworkSchedule = [
@@ -194,33 +196,30 @@ class DemoLists {
         id: '',
         imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
-        notes: 'Schedule 1 note here'),
+        notes: 'ملاحظات المعلم عن الواجب المنزلي 1'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
-        notes: 'Schedule 2 note here'),
+        notes: 'ملاحظات المعلم عن الواجب المنزلي 2'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
-        notes: 'Schedule 3 note here'),
+        notes: 'ملاحظات المعلم عن الواجب المنزلي 3'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
-        notes: 'Schedule 4 note here'),
+        notes: 'ملاحظات المعلم عن الواجب المنزلي 4'),
     Schedule(
         id: '',
         imgUrl: 'assets/images/homework.png',
         date: '12-12-2012',
-        notes: 'Schedule 5 note here'),
+        notes: 'ملاحظات المعلم عن الواجب المنزلي 5'),
   ];
 
 
   ///Question Types
-  static const List<String> questionTypes = [
-    'CHOOSE THE CORRECT',
-    "TRUE OR FALSE"
-  ];
+  static const List<String> questionTypes = ['اختيار من متعدد', "صواب ام خطأ"];
 }

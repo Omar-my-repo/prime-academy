@@ -8,7 +8,8 @@ class ShareApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
-      child: CustomListTile(title: 'Share', leading: Icon(Icons.share)),
+      child:
+          CustomListTile(title: 'مشاركة التطبيق', leading: Icon(Icons.share)),
     );
   }
 }

@@ -17,7 +17,7 @@ class MainButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          padding: EdgeInsets.symmetric(vertical: 14)),
+          padding: EdgeInsets.symmetric(vertical: 10)),
       child: Text(
         text,
         style: TextStyle(fontSize: 18),

@@ -32,27 +32,30 @@ class TrueOrFalseQuestion extends Question {
 
 List<Question> questions = [
   ChooseTheCorrectQuestion(
-      title: 'Choose the correct answer Q1',
-      answer1: 'answer11',
-      answer2: 'answer12',
-      answer3: 'answer13',
-      answer4: 'answer14',
-      modelAnswer: 'answer12'),
+      title: 'عنوان السؤال الأول من اختيار من متعدد',
+      answer1: 'الاجابة11',
+      answer2: 'الاجابه12',
+      answer3: 'الاجابه13',
+      answer4: 'الاجابه14',
+      modelAnswer: 'الاجابه12'),
   ChooseTheCorrectQuestion(
-      title: 'Choose the correct answer Q2',
-      answer1: 'answer21',
-      answer2: 'answer22',
-      answer3: 'answer23',
-      answer4: 'answer24',
-      modelAnswer: 'answer23'),
+      title: 'عنوان السؤال الثاني من اختيار من متعدد',
+      answer1: 'الاجابة21',
+      answer2: 'الاجابه22',
+      answer3: 'الاجابه23',
+      answer4: 'الاجابه24',
+      modelAnswer: 'الاجابه22'),
   ChooseTheCorrectQuestion(
-      title: 'Choose the correct answer Q3',
-      answer1: 'answer31',
-      answer2: 'answer32',
-      answer3: 'answer33',
-      answer4: 'answer34',
-      modelAnswer: 'answer31'),
-  TrueOrFalseQuestion(title: 'True Or False Q1', modelAnswer: 'True'),
-  TrueOrFalseQuestion(title: 'True Or False Q2', modelAnswer: 'False'),
-  TrueOrFalseQuestion(title: 'True Or False Q3', modelAnswer: 'True'),
+      title: 'عنوان السؤال الثالث من اختيار من متعدد',
+      answer1: 'الاجابة31',
+      answer2: 'الاجابه32',
+      answer3: 'الاجابه33',
+      answer4: 'الاجابه34',
+      modelAnswer: 'الاجابه32'),
+  TrueOrFalseQuestion(
+      title: 'السؤال الاول من صواب ام خطأ', modelAnswer: 'True'),
+  TrueOrFalseQuestion(
+      title: 'السؤال الثاني من صواب ام خطأ', modelAnswer: 'false'),
+  TrueOrFalseQuestion(
+      title: 'السؤال الثالث من صواب ام خطأ', modelAnswer: 'True'),
 ];

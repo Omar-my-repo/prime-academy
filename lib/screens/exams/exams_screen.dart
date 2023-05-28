@@ -26,7 +26,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Exams'),
+            ScreenTitle('الاختبارات'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -89,14 +89,14 @@ class _ExamsScreenState extends State<ExamsScreen> {
                           children: [
                             SizedBox(height: 10),
                             Text(
-                              'Mathemtics',
+                              'الرياضيات',
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 10),
                             Row(
                               children: [
-                                Text('Exam Date: ',
+                                Text('تاريخ الاختبار: ',
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
@@ -110,7 +110,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
                             SizedBox(height: 10),
                             Row(
                               children: [
-                                Text('Exam Start Time: ',
+                                Text('وقت بداية الامتحان: ',
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
@@ -124,20 +124,20 @@ class _ExamsScreenState extends State<ExamsScreen> {
                             SizedBox(height: 10),
                             Row(
                               children: [
-                                Text('Exam Last for: ',
+                                Text('مدة الاختبار: ',
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                         color: Colors.black54)),
-                                Text('One Hour and Half',
+                                Text('ساعة ونص ساعة',
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold)),
                               ],
                             ),
-                            SizedBox(height: 10),
+                            // SizedBox(height: 10),
                             Align(
-                                alignment: Alignment.centerRight,
+                                alignment: Alignment.centerLeft,
                                 child: ElevatedButton(
                                     onPressed: () {
                                       Navigator.push(
@@ -146,7 +146,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
                                               builder: (context) =>
                                                   AllQuestionsScreen()));
                                     },
-                                    child: Text('Details'))),
+                                    child: Text('تفاصيل الاختبار'))),
                             SizedBox(height: 4),
                           ],
                         ),

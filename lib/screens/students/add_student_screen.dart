@@ -31,12 +31,12 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Add New Student'),
+            ScreenTitle('إضافة طالب جديد'),
             const SizedBox(height: 10),
             Expanded(
                 child: SingleChildScrollView(
@@ -49,8 +49,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                     CustomTextField(
                       controller: _firstNameController,
                       validator: (value) {},
-                      hint: 'Enter Student First Name',
-                      label: 'First Name',
+                      label: 'الاسم الأول',
                     ),
                     const SizedBox(height: 16),
                     Row(
@@ -59,8 +58,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                           child: CustomTextField(
                             controller: _middleNameController,
                             validator: (value) {},
-                            hint: 'Enter Student Middle Name',
-                            label: 'Middle Name',
+                            label: 'الاسم الأوسط',
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -68,8 +66,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                           child: CustomTextField(
                             controller: _lastNameController,
                             validator: (value) {},
-                            hint: 'Enter Student Last Name',
-                            label: 'Last Name',
+                            label: 'الاسم الاخير',
                           ),
                         ),
                       ],
@@ -79,8 +76,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                       controller: _addressController,
                       textInputType: TextInputType.number,
                       validator: (value) {},
-                      hint: 'Enter student Address',
-                      label: 'Address',
+                      label: 'العنوان',
                     ),
                     const SizedBox(height: 16),
                     CustomTextField(
@@ -93,22 +89,21 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                         // }
                         // return null;
                       },
-                      hint: 'Enter student phone number',
-                      label: 'Phone',
+                      // hint: 'Enter student phone number',
+                      label: 'رقم الهاتف',
                     ),
                     SizedBox(height: 16),
                     CustomTextField(
                       controller: _userNameController,
                       validator: (value) {},
-                      hint: 'Enter student user name',
-                      label: 'User Name',
+                      label: 'اسم المستخدم',
                     ),
                     const SizedBox(height: 16),
                     CustomTextField(
                       controller: _passwordController,
                       validator: (value) {},
-                      hint: 'Enter Student Password',
-                      label: 'Password',
+
+                      label: 'كلمة المرور',
                       //obscureText: isObscure,
                       // suffixIcon: IconButton(
                       //     onPressed: () {
@@ -122,8 +117,8 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                     CustomTextField(
                       controller: _confirmPasswordController,
                       validator: (value) {},
-                      hint: 'Confirm Student Password',
-                      label: 'confirm password',
+
+                      label: 'تأكيد كلمة المرور',
                       //obscureText: isObscure,
                       // suffixIcon: IconButton(
                       //     onPressed: () {
@@ -158,8 +153,8 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                               Expanded(
                                 child: Text(
                                     result == null || result!.isEmpty
-                                        ? 'Add Parent'
-                                        : 'Parent: $result',
+                                        ? 'إضافة ولي أمر'
+                                        : '$result',
                                     style: TextStyle(
                                         overflow: TextOverflow.ellipsis,
                                         fontSize: 16,
@@ -173,7 +168,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                     SizedBox(height: 20),
                     Row(
                       children: [
-                        Text("Choose student Level"),
+                        Text("إختر الصف الدراسي"),
                         SizedBox(width: 10),
                         Expanded(
                           child: DropdownButtonFormField(
@@ -212,9 +207,9 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                       onTap: () {
                         // validForm();
                       },
-                      text: 'Create Account',
+                      text: 'حفظ البيانات',
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),

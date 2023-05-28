@@ -26,7 +26,7 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            ScreenTitle('Homework'),
+            ScreenTitle('الواجبات المنزلية'),
             SizedBox(height: 10),
             SizedBox(
               height: 40,
