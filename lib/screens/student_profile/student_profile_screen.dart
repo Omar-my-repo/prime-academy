@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:prime_academy/shared/style/colors.dart';
+import 'package:prime_academy/shared/widgets/linear_percentage_indicator.dart';
+import 'package:prime_academy/shared/widgets/profile_card.dart';
 
 class StudentProfileScreen extends StatelessWidget {
   static const String routeName = 'studentProfileScreen';
@@ -45,8 +46,17 @@ class StudentProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 14),
-                  Text('Omar Muhammad',
-                      style: TextStyle(fontSize: 19, color: Colors.white))
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Omar Muhammad',
+                          style: TextStyle(fontSize: 19, color: Colors.white)),
+                      SizedBox(height: 6),
+                      Text('Level 1',
+                          style:
+                              TextStyle(fontSize: 16, color: Colors.white70)),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -62,27 +72,37 @@ class StudentProfileScreen extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
-                            child: profileSection('اسم المستخدم', 'omm8233')),
+                            child: ProfileCard(
+                                cardTitle: 'اسم المستخدم',
+                                cardContent: 'omm8233')),
                         Expanded(
-                            child: profileSection('الرقم السري', '12345678')),
+                            child: ProfileCard(
+                                cardTitle: 'الرقم السري',
+                                cardContent: '12345678')),
                       ],
                     ),
 
                     SizedBox(
                         width: double.infinity,
-                        child: profileSection('العنوان', '4 elharam st- giza')),
+                        child: ProfileCard(
+                            cardTitle: 'العنوان',
+                            cardContent: '4 elharam st- giza')),
                     SizedBox(
                         width: double.infinity,
-                        child: profileSection(
-                            'البريد الالكتروني', 'email@gmail.com')),
+                        child: ProfileCard(
+                            cardTitle: 'البريد الالكتروني',
+                            cardContent: 'email@gmail.com')),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
-                            child: profileSection(
-                                'اسم ولي الامر', 'عمر محمد علي')),
+                            child: ProfileCard(
+                                cardTitle: 'اسم ولي الامر',
+                                cardContent: 'عمر محمد علي')),
                         Expanded(
-                            child: profileSection('رقم الهاتف', '01234567891')),
+                            child: ProfileCard(
+                                cardTitle: 'رقم الهاتف',
+                                cardContent: '01234567891')),
                         // profileSection('رقم الهاتف','12345678910'),
                       ],
                     ),
@@ -119,7 +139,9 @@ class StudentProfileScreen extends StatelessWidget {
                               children: [
                                 Text('الحضور', style: TextStyle(fontSize: 18)),
                                 SizedBox(),
-                                linearPercentageIndicator(percentage: .9),
+                                PercentageIndicator(
+                                  percentage: .87,
+                                ),
                                 SizedBox(),
                               ],
                             ),
@@ -130,7 +152,7 @@ class StudentProfileScreen extends StatelessWidget {
                                 Text('الواجبات',
                                     style: TextStyle(fontSize: 18)),
                                 SizedBox(),
-                                linearPercentageIndicator(percentage: .7),
+                                PercentageIndicator(percentage: .7),
                                 SizedBox(),
                               ],
                             ),
@@ -141,7 +163,17 @@ class StudentProfileScreen extends StatelessWidget {
                                 Text('المشاركة',
                                     style: TextStyle(fontSize: 18)),
                                 SizedBox(),
-                                linearPercentageIndicator(percentage: 1),
+                                PercentageIndicator(percentage: 1),
+                                SizedBox(),
+                              ],
+                            ),
+                            SizedBox(height: 2),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('السلوك', style: TextStyle(fontSize: 18)),
+                                SizedBox(),
+                                PercentageIndicator(percentage: .92),
                                 SizedBox(),
                               ],
                             ),
@@ -152,7 +184,7 @@ class StudentProfileScreen extends StatelessWidget {
                                 Text('تقييم عام',
                                     style: TextStyle(fontSize: 18)),
                                 SizedBox(),
-                                linearPercentageIndicator(percentage: .85),
+                                PercentageIndicator(percentage: .85),
                                 SizedBox(),
                               ],
                             ),
@@ -178,55 +210,5 @@ class StudentProfileScreen extends StatelessWidget {
     );
   }
 
-  Widget linearPercentageIndicator(
-      {required double percentage, Color? progressColor}) {
-    return LinearPercentIndicator(
-      width: 200,
-      animation: true,
-      lineHeight: 20.0,
-      animationDuration: 2000,
-      percent: percentage,
-      center: Text("${percentage * 100}%"),
-      barRadius: Radius.circular(8),
-      progressColor: progressColor ?? Colors.greenAccent,
-    );
-  }
 
-  Widget profileSection(String title, String content) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(color: Colors.black54),
-                ),
-                // IconButton(onPressed: (){}, icon: Icon(Icons.edit,size: 18,color: MyColors.homeBgColor,)),
-                InkWell(
-                  onTap: () {},
-                  child: Icon(
-                    Icons.edit,
-                    color: MyColors.homeBgColor.withOpacity(.5),
-                    size: 20,
-                  ),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 2,
-            ),
-            Text(content, style: TextStyle(fontSize: 18, height: 1)),
-            SizedBox(
-              height: 2,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }

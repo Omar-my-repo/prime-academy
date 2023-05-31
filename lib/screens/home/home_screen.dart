@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:prime_academy/model/demo_lists.dart';
+import 'package:prime_academy/model/screen.dart';
 import 'package:prime_academy/shared/style/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = 'homeScreen';
 
-  List<String> screens = DemoLists.screens;
+  List<Screen> allScreens = Screen.allScreens;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             'مرحباً بكم\nمعاَ نصنع مستقبل أفضل',
                             style: TextStyle(
-                                fontSize: 28,
+                                fontSize: 26,
                                 // fontWeight: FontWeight.bold,
                                 height: 1,
                                 color: Colors.white),
@@ -146,7 +146,7 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 child: GridView.builder(
                     padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                    itemCount: DemoLists.homeContent.length,
+                    itemCount: allScreens.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount:
                           orientation == Orientation.portrait ? 3 : 5,
@@ -159,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                         onTap: () {
                           // Navigator.pushNamed(context, screens[index]);
                           Navigator.of(context, rootNavigator: true)
-                              .pushNamed(screens[index]);
+                              .pushNamed(allScreens[index].route);
                         },
                         child: Card(
                           elevation: 2,
@@ -171,14 +171,14 @@ class HomeScreen extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(
                                     top: 10.0, right: 30, left: 30),
-                                child: Image.asset(DemoLists.icons[index]),
+                                child: Image.asset(allScreens[index].iconAsset),
                               ),
                               // SizedBox(height: 10),
                               Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 2.0),
                                 child: Text(
-                                  DemoLists.homeContent[index],
+                                  allScreens[index].title,
                                   style: TextStyle(
                                       fontSize: 17,
                                       height: 1.3,

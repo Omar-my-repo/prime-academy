@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:prime_academy/shared/style/routes.dart';
+import 'package:prime_academy/shared/routes.dart';
 import 'package:prime_academy/shared/style/theme_data.dart';
 
 import 'screens/home/home_screen.dart';

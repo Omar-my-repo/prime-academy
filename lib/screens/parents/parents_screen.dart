@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prime_academy/screens/parent_profile/parent_profile_screen.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
@@ -61,6 +62,10 @@ class _ParentsScreenState extends State<ParentsScreen> {
                                   ],
                                 ),
                                 InkWell(
+                                  onTap: () {
+                                    Navigator.pushNamed(
+                                        context, ParentProfileScreen.routeName);
+                                  },
                                   child: Container(
                                     padding: EdgeInsets.all(8),
                                     margin: EdgeInsets.symmetric(horizontal: 8),

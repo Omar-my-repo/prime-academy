@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:prime_academy/model/questions.dart';
 
 class AllQuestionsScreen extends StatelessWidget {
+  static const String routeName = 'allQuestionScreen';
+
   List<ChooseTheCorrectQuestion> chooseQs = [];
   List<TrueOrFalseQuestion> trueOrFalseQs = [];
 
@@ -38,7 +40,7 @@ class AllQuestionsScreen extends StatelessWidget {
                       const Divider(thickness: 1),
                       Container(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                        EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                         color: Colors.grey[200],
                         child: ListView.separated(
                             shrinkWrap: true,
@@ -98,7 +100,7 @@ class AllQuestionsScreen extends StatelessWidget {
                       const Divider(thickness: 1),
                       Container(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                        EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                         color: Colors.grey[200],
                         child: ListView.separated(
                             itemCount: trueOrFalseQs.length,

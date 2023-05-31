@@ -9,6 +9,7 @@ class ScreenTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
+      textDirection: TextDirection.rtl,
       style: TextStyle(
         fontSize: 24,
         height: 1.2,

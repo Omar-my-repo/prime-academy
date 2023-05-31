@@ -88,63 +88,72 @@ class _ExamsScreenState extends State<ExamsScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(height: 10),
-                            Text(
-                              'الرياضيات',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(height: 10),
                             Row(
                               children: [
-                                Text('تاريخ الاختبار: ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black54)),
-                                Text('12-1-2023',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)),
+                                Text(
+                                  'الرياضيات',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Spacer(),
+                                Text(
+                                  'Level 1',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                // Spacer(),
                               ],
                             ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text('وقت بداية الامتحان: ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black54)),
-                                Text('10 AM',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)),
-                              ],
+                            Divider(
+                              thickness: 1,
+                              height: 10,
                             ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text('مدة الاختبار: ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black54)),
-                                Text('ساعة ونص ساعة',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)),
-                              ],
+
+                            ///
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        label('23-12-2023'),
+                                        label('120 د'),
+                                        label(' امتحان نصف العام'),
+                                      ],
+                                    ),
+                                  ),
+                                  Column(
+                                    // mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+
+                                    children: [
+                                      label('10:00 صباحاً'),
+                                      label('30 درجة'),
+                                    ],
+                                  ),
+                                  SizedBox()
+                                ],
+                              ),
                             ),
-                            // SizedBox(height: 10),
+
+                            ///
                             Align(
                                 alignment: Alignment.centerLeft,
                                 child: ElevatedButton(
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  AllQuestionsScreen()));
+                                      Navigator.of(context, rootNavigator: true)
+                                          .pushNamed(
+                                              AllQuestionsScreen.routeName);
                                     },
                                     child: Text('تفاصيل الاختبار'))),
                             SizedBox(height: 4),
@@ -164,5 +173,14 @@ class _ExamsScreenState extends State<ExamsScreen> {
         child: Icon(Icons.add),
       ),
     );
+  }
+
+  Widget label(String label) {
+    return Text(label,
+        style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[700],
+            height: 1.5));
   }
 }

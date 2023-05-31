@@ -178,10 +178,7 @@ class _AddExamScreenState extends State<AddExamScreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => AllQuestionsScreen()));
+                  Navigator.pushNamed(context, AllQuestionsScreen.routeName);
                   // showModalBottomSheet(
                   //     context: context,
                   //     builder: (context) {
@@ -232,7 +229,9 @@ class _AddExamScreenState extends State<AddExamScreen> {
         SizedBox(height: 4),
         CustomTextField(
           controller: _examDuration,
-          hint: 'اضف مدة الامتحان',
+          hint: 'اضف مدة الامتحان بالدقائق',
+          textInputType:
+              TextInputType.numberWithOptions(decimal: false, signed: false),
           validator: (value) {},
         ),
       ],

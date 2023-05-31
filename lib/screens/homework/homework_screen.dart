@@ -72,9 +72,7 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
                     );
                   }),
             ),
-            Divider(
-              thickness: 1,
-            ),
+            Divider(thickness: 1),
             // SizedBox(height: 10),
             Expanded(
               child: ListView.separated(

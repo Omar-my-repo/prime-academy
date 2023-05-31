@@ -44,18 +44,22 @@ class _AddTrueFalseQScreenState extends State<AddTrueFalseQScreen> {
                       Text('الدرجة'),
                       SizedBox(width: 6),
                       SizedBox(
-                          width: 40,
-                          child: CustomTextField(
-                            controller: _degreeController,
-                            validator: (value) {},
-                            hint: '',
-                            textInputType: TextInputType.number,
-                          ))
+                        width: 80,
+                        child: TextFormField(
+                          controller: _degreeController,
+                          textAlign: TextAlign.center,
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.zero,
+                          ),
+                          validator: (value) {},
+                        ),
+                      )
                     ],
                   )
                 ],
               ),
-              SizedBox(height: 4),
+              SizedBox(height: 20),
               CustomTextField(
                 controller: _titleController,
                 hint: 'اض السؤال هنا',
@@ -106,6 +110,7 @@ class _AddTrueFalseQScreenState extends State<AddTrueFalseQScreen> {
                     if (modelAnswer != null && modelAnswer!.isNotEmpty) {
                       questions.add(TrueOrFalseQuestion(
                           title: _titleController.text,
+                          degree: int.parse(_degreeController.text),
                           modelAnswer: modelAnswer!));
                       Navigator.pop(context);
                     } else {

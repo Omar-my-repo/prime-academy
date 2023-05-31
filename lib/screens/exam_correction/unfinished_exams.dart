@@ -84,10 +84,23 @@ class _UnFinishedExamsState extends State<UnFinishedExams> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(height: 10),
-                            Text(
-                              'الرياضيات',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Row(
+                              children: [
+                                Text(
+                                  'الرياضيات',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Spacer(),
+                                Text(
+                                  'Level 1',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                // Spacer(),
+                              ],
                             ),
                             Divider(
                               thickness: 1,
@@ -95,25 +108,38 @@ class _UnFinishedExamsState extends State<UnFinishedExams> {
                             ),
 
                             ///
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  children: [
-                                    label('23-12-2023'),
-                                    label('10:00 صباحاً'),
-                                    label('ساعة ونصف'),
-                                  ],
-                                ),
-                                Column(
-                                  children: [
-                                    label('Level 1'),
-                                    label('30 درجة'),
-                                    label('امتحان نصف العام'),
-                                  ],
-                                ),
-                                SizedBox()
-                              ],
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        label('23-12-2023'),
+                                        label('120 د'),
+                                        label(' امتحان نصف العام'),
+                                      ],
+                                    ),
+                                  ),
+                                  Column(
+                                    // mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+
+                                    children: [
+                                      label('10:00 صباحاً'),
+                                      label('30 درجة'),
+                                    ],
+                                  ),
+                                  SizedBox()
+                                ],
+                              ),
                             ),
 
                             ///
@@ -121,11 +147,8 @@ class _UnFinishedExamsState extends State<UnFinishedExams> {
                                 alignment: Alignment.centerLeft,
                                 child: ElevatedButton(
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  AllQuestionsScreen()));
+                                      Navigator.pushNamed(context,
+                                          AllQuestionsScreen.routeName);
                                     },
                                     child: Text('تفاصيل الاختبار'))),
                             SizedBox(height: 4),
@@ -149,7 +172,10 @@ class _UnFinishedExamsState extends State<UnFinishedExams> {
 
   Widget label(String label) {
     return Text(label,
-        style:
-            TextStyle(fontSize: 16, fontWeight: FontWeight.bold, height: 1.5));
+        style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[700],
+            height: 1.5));
   }
 }

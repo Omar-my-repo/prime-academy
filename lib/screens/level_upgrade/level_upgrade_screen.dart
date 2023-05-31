@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
 import 'package:prime_academy/shared/widgets/level_card.dart';
+import 'package:prime_academy/shared/widgets/linear_percentage_indicator.dart';
 import 'package:prime_academy/shared/widgets/screen_title.dart';
 
 class LevelUpgradeScreen extends StatefulWidget {
@@ -65,84 +66,79 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             SizedBox(height: 12),
                             Row(
                               children: [
-                                Icon(
-                                  Icons.person,
-                                  size: 20,
-                                  color: Theme.of(context).primaryColor,
+                                CircleAvatar(
+                                  radius: 16,
+                                  backgroundImage:
+                                      AssetImage('assets/images/student.jpg'),
                                 ),
                                 SizedBox(width: 10),
                                 Text(
                                   'Hassan Gamal',
                                   style: TextStyle(
-                                      color: Theme.of(context).primaryColor,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
+                                    color: Theme.of(context).primaryColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
                               ],
                             ),
                             SizedBox(height: 6),
-                            Row(
-                              children: [
-                                Text('الدرجة: ',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                                SizedBox(width: 10),
-                                Text('270',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                              ],
-                            ),
                             SizedBox(height: 6),
                             Row(
                               children: [
-                                Text('النسبة المؤية: ',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                                SizedBox(width: 10),
-                                Text('97 %',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
+                                Column(
+                                  children: [
+                                    Text('الدرجة: ',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.black54)),
+                                    SizedBox(width: 10),
+                                    Text('النسبة المؤية ',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.black54)),
+                                    SizedBox(height: 10),
+                                    Text('نسبة الحضور',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.black54)),
+                                    SizedBox(height: 10),
+                                    Text('السلوك ',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.black54)),
+                                  ],
+                                ),
+                                SizedBox(width: 5),
+                                Column(
+                                  children: [
+                                    Text('270 / 280',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500)),
+                                    SizedBox(height: 10),
+                                    PercentageIndicator(percentage: .97),
+                                    SizedBox(height: 10),
+                                    PercentageIndicator(percentage: .94),
+                                    SizedBox(height: 10),
+                                    PercentageIndicator(percentage: .925),
+                                  ],
+                                )
                               ],
                             ),
-                            SizedBox(height: 6),
-                            Row(
-                              children: [
-                                Text('نسبة الحضور',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                                SizedBox(width: 10),
-                                Text('90 %',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                              ],
-                            ),
-                            SizedBox(height: 6),
-                            Row(
-                              children: [
-                                Text('السلوك: ',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                                SizedBox(width: 10),
-                                Text('99 %',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                              ],
-                            ),
-                            SizedBox(height: 6),
-                            Divider(thickness: 1),
-                            SizedBox(height: 6),
+                            Divider(thickness: 1, height: 10),
                             Row(
                               children: [
                                 Text('التقييم الكلي: ',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
-                                Text('95 %',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
+                                PercentageIndicator(
+                                    percentage: .935,
+                                    progressColor: Colors.lightGreen),
                               ],
                             ),
-                            // SizedBox(height: 12),
+                            SizedBox(height: 12),
                             Align(
                               alignment: Alignment.centerLeft,
                               child: ElevatedButton(

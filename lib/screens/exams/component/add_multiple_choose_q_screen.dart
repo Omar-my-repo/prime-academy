@@ -47,22 +47,33 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text('الدرجة'),
-                      SizedBox(width: 6),
+                      SizedBox(width: 12),
                       SizedBox(
-                          width: 40,
-                          child: CustomTextField(
-                            controller: _degreeController,
-                            validator: (value) {},
-                            hint: '',
-                            textInputType: TextInputType.number,
-                          ))
+                        width: 80,
+                        child: TextFormField(
+                          controller: _degreeController,
+                          textAlign: TextAlign.center,
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.zero,
+                          ),
+                          validator: (value) {},
+                        ),
+                        //    child: CustomTextField(
+                        //       controller: _degreeController,
+                        //       validator: (value) {},
+                        //       hint: '',
+                        //       textInputType: TextInputType.number,
+                        //     ),
+                      )
                     ],
                   )
                 ],
               ),
-              SizedBox(height: 4),
+              SizedBox(height: 20),
               CustomTextField(
                 controller: _titleController,
                 hint: 'اضف السؤال هنا',
@@ -206,6 +217,7 @@ class _AddMultipleChooseQScreenState extends State<AddMultipleChooseQScreen> {
                           answer2: _answer2Controller.text,
                           answer3: _answer3Controller.text,
                           answer4: _answer4Controller.text,
+                          degree: int.parse(_degreeController.text),
                           modelAnswer: modelAnswer!));
                       Navigator.pop(context);
                     } else {

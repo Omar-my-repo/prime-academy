@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prime_academy/model/demo_lists.dart';
+import 'package:prime_academy/screens/exam_correction/finshed_exams/students_answers.dart';
 import 'package:prime_academy/shared/widgets/level_card.dart';
 
 class FinishedExams extends StatefulWidget {
@@ -83,10 +84,23 @@ class _FinishedExamsState extends State<FinishedExams> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(height: 10),
-                            Text(
-                              'الرياضيات',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Row(
+                              children: [
+                                Text(
+                                  'الرياضيات',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Spacer(),
+                                Text(
+                                  'Level 1',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                // Spacer(),
+                              ],
                             ),
                             Divider(
                               thickness: 1,
@@ -94,25 +108,38 @@ class _FinishedExamsState extends State<FinishedExams> {
                             ),
 
                             ///
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  children: [
-                                    label('23-12-2023'),
-                                    label('10:00 صباحاً'),
-                                    label('ساعة ونصف'),
-                                  ],
-                                ),
-                                Column(
-                                  children: [
-                                    label('Level 1'),
-                                    label('30 درجة'),
-                                    label('امتحان نصف العام'),
-                                  ],
-                                ),
-                                SizedBox()
-                              ],
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        label('23-12-2023'),
+                                        label('120 د'),
+                                        label(' امتحان نصف العام'),
+                                      ],
+                                    ),
+                                  ),
+                                  Column(
+                                    // mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+
+                                    children: [
+                                      label('10:00 صباحاً'),
+                                      label('30 درجة'),
+                                    ],
+                                  ),
+                                  SizedBox()
+                                ],
+                              ),
                             ),
 
                             ///
@@ -120,11 +147,8 @@ class _FinishedExamsState extends State<FinishedExams> {
                                 alignment: Alignment.centerLeft,
                                 child: ElevatedButton(
                                     onPressed: () {
-                                      // Navigator.push(
-                                      //     context,
-                                      //     MaterialPageRoute(
-                                      //         builder: (context) =>
-                                      //             AllQuestionsScreen()));
+                                      Navigator.of(context, rootNavigator: true)
+                                          .pushNamed(StudentsAnswers.routeName);
                                     },
                                     child: Text('أجوبة الطلبة'))),
                             SizedBox(height: 4),
@@ -148,7 +172,10 @@ class _FinishedExamsState extends State<FinishedExams> {
 
   Widget label(String label) {
     return Text(label,
-        style:
-            TextStyle(fontSize: 16, fontWeight: FontWeight.bold, height: 1.5));
+        style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[700],
+            height: 1.5));
   }
 }

@@ -1,71 +1,7 @@
 import 'package:prime_academy/model/schedule.dart';
-import 'package:prime_academy/screens/exam_correction/exam_correction_screen.dart';
-import 'package:prime_academy/screens/exams/exams_screen.dart';
-import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
-import 'package:prime_academy/screens/homework/homework_screen.dart';
-import 'package:prime_academy/screens/level_upgrade/level_upgrade_screen.dart';
-import 'package:prime_academy/screens/levels/levels_screen.dart';
-import 'package:prime_academy/screens/parents/parents_screen.dart';
-import 'package:prime_academy/screens/payment/payment_screen.dart';
-import 'package:prime_academy/screens/schedule/student_schedule_screen.dart';
-import 'package:prime_academy/screens/students/students_screen.dart';
-import 'package:prime_academy/screens/subjects/subjects_screen.dart';
-import 'package:prime_academy/screens/teacher/teachers_screen.dart';
 
 class DemoLists {
   ///home screen content and routes
-  static const List<String> homeContent = [
-    'الطلاب',
-    'أولياء الأمور',
-    'المعلمين',
-    'المواد الدراسية',
-    'الصفوف الدراسية',
-    'المدفوعات',
-    'الجدول الدراسي',
-    'جدول الإمتحانات',
-    'الواجبات المنزلية',
-    'الإختبارات',
-    'نقل الطلبة',
-    'تصحيح الاختبارات',
-    'نتائج الإختبارات',
-    'تقييم الطلبة',
-    'الحضور',
-  ];
-
-  static const List<String> screens = [
-    StudentsScreen.routeName,
-    ParentsScreen.routeName,
-    TeachersScreen.routeName,
-    SubjectsScreen.routeName,
-    LevelsScreen.routeName,
-    PaymentScreen.routeName,
-    StudentScheduleScreen.routeName,
-    ExamsScheduleScreen.routeName,
-    HomeworkScreen.routeName,
-    ExamsScreen.routeName,
-    LevelUpgradeScreen.routeName,
-    ExamCorrectionScreen.routeName,
-  ];
-
-  ///icons
-  static const List<String> icons = [
-    'assets/icons/students.png',
-    'assets/icons/family.png',
-    'assets/icons/classroom.png',
-    'assets/icons/book-stack.png',
-    'assets/icons/school.png',
-    'assets/icons/payment-method.png',
-    'assets/icons/calendar.png',
-    'assets/icons/halloween.png',
-    'assets/icons/homework.png',
-    'assets/icons/exam.png',
-    'assets/icons/star.png',
-    'assets/images/prime_logo.jpg',
-    'assets/images/prime_logo.jpg',
-    'assets/images/prime_logo.jpg',
-    'assets/images/prime_logo.jpg',
-  ];
-
 
   ///student screen => add student screen
   static const List<String> parentsName = [
@@ -94,6 +30,13 @@ class DemoLists {
     'Junior Three',
     'Junior Four'
   ];
+
+  ///dropdownMenu
+  static List<String> employeesType = [
+    'مدير',
+    'مدخل بيانات',
+  ];
+
   static List<int> selectedLevels = [];
 
   ///for subjects
@@ -219,7 +162,17 @@ class DemoLists {
         notes: 'ملاحظات المعلم عن الواجب المنزلي 5'),
   ];
 
-
   ///Question Types
   static const List<String> questionTypes = ['اختيار من متعدد', "صواب ام خطأ"];
+
+  static List<String> studentQuestionAnswersChoose = [
+    'الاجابة11',
+    'الاجابه22',
+    'الاجابة31'
+  ];
+  static List<String> studentQuestionAnswersTrueOrFalse = [
+    'True',
+    'True',
+    'True'
+  ];
 }

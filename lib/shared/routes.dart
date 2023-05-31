@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:prime_academy/screens/attendance/attendance.dart';
 import 'package:prime_academy/screens/exam_correction/exam_correction_screen.dart';
+import 'package:prime_academy/screens/exam_correction/finshed_exams/student_answers/student_answers_screen.dart';
 import 'package:prime_academy/screens/exam_correction/finshed_exams/students_answers.dart';
 import 'package:prime_academy/screens/exams/add_exam_screen.dart';
+import 'package:prime_academy/screens/exams/component/all_questions_screen.dart';
 import 'package:prime_academy/screens/exams/exams_screen.dart';
 import 'package:prime_academy/screens/exams_schadule/add_exam_schedule.dart';
 import 'package:prime_academy/screens/exams_schadule/exams_schadule_screen.dart';
@@ -12,12 +15,16 @@ import 'package:prime_academy/screens/layout/layout_screen.dart';
 import 'package:prime_academy/screens/level_upgrade/level_upgrade_screen.dart';
 import 'package:prime_academy/screens/levels/levels_screen.dart';
 import 'package:prime_academy/screens/login/login_screen.dart';
+import 'package:prime_academy/screens/management/add_employee_screen.dart';
+import 'package:prime_academy/screens/management/managers_screen.dart';
+import 'package:prime_academy/screens/parent_profile/parent_profile_screen.dart';
 import 'package:prime_academy/screens/parents/add_parent_screen.dart';
 import 'package:prime_academy/screens/parents/parents_screen.dart';
 import 'package:prime_academy/screens/payment/payment_screen.dart';
 import 'package:prime_academy/screens/schedule/add_student_schedule.dart';
 import 'package:prime_academy/screens/schedule/student_schedule_screen.dart';
 import 'package:prime_academy/screens/student_profile/student_profile_screen.dart';
+import 'package:prime_academy/screens/student_rating/student_rating_screen.dart';
 import 'package:prime_academy/screens/students/add_student_screen.dart';
 import 'package:prime_academy/screens/students/students_screen.dart';
 import 'package:prime_academy/screens/subjects/subjects_screen.dart';
@@ -50,5 +57,13 @@ class MyRoutes {
     StudentProfileScreen.routeName: (_) => StudentProfileScreen(),
     ExamCorrectionScreen.routeName: (_) => ExamCorrectionScreen(),
     StudentsAnswers.routeName: (_) => StudentsAnswers(),
+    AllQuestionsScreen.routeName: (_) => AllQuestionsScreen(),
+    StudentsRatingScreen.routeName: (_) => StudentsRatingScreen(),
+    // AttendanceScreen.routeName:(_)=>AttendanceScreen(),
+    Attendance.routeName: (_) => Attendance(),
+    StudentAnswersScreen.routeName: (_) => StudentAnswersScreen(),
+    ManagersScreen.routeName: (_) => ManagersScreen(),
+    AddEmployeeScreen.routeName: (_) => AddEmployeeScreen(),
+    ParentProfileScreen.routeName: (_) => ParentProfileScreen(),
   };
 }
