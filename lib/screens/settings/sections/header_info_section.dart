@@ -11,7 +11,7 @@ class HeaderInfoSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           CircleAvatar(
-            radius: 35,
+            radius: 33,
             backgroundColor: Colors.white,
             child: CircleAvatar(
               backgroundImage: AssetImage('assets/icons/manager.png'),

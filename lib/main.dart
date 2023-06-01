@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:prime_academy/screens/layout/layout_screen.dart';
 import 'package:prime_academy/shared/routes.dart';
 import 'package:prime_academy/shared/style/theme_data.dart';
-
-import 'screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Prime Academy',
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: LayoutScreen.routeName,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale('ar'),

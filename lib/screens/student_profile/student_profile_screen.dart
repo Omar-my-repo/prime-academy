@@ -133,62 +133,43 @@ class StudentProfileScreen extends StatelessWidget {
                                 )
                               ],
                             ),
-                            SizedBox(height: 2),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('الحضور', style: TextStyle(fontSize: 18)),
-                                SizedBox(),
-                                PercentageIndicator(
-                                  percentage: .87,
-                                ),
-                                SizedBox(),
-                              ],
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                children: [
+                                  Column(
+                                    children: [
+                                      label('الحضور'),
+                                      SizedBox(height: 10),
+                                      label(
+                                        'الواجبات',
+                                      ),
+                                      SizedBox(height: 10),
+                                      label('المشاركة'),
+                                      SizedBox(height: 10),
+                                      label('السلوك'),
+                                      SizedBox(height: 10),
+                                      label('تقييم عام'),
+                                    ],
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Column(
+                                    children: [
+                                      PercentageIndicator(percentage: .91),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(percentage: .87),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(percentage: .825),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(percentage: .95),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(percentage: .90),
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
-                            SizedBox(height: 2),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('الواجبات',
-                                    style: TextStyle(fontSize: 18)),
-                                SizedBox(),
-                                PercentageIndicator(percentage: .7),
-                                SizedBox(),
-                              ],
-                            ),
-                            SizedBox(height: 2),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('المشاركة',
-                                    style: TextStyle(fontSize: 18)),
-                                SizedBox(),
-                                PercentageIndicator(percentage: 1),
-                                SizedBox(),
-                              ],
-                            ),
-                            SizedBox(height: 2),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('السلوك', style: TextStyle(fontSize: 18)),
-                                SizedBox(),
-                                PercentageIndicator(percentage: .92),
-                                SizedBox(),
-                              ],
-                            ),
-                            SizedBox(height: 2),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('تقييم عام',
-                                    style: TextStyle(fontSize: 18)),
-                                SizedBox(),
-                                PercentageIndicator(percentage: .85),
-                                SizedBox(),
-                              ],
-                            ),
-                            SizedBox(height: 2),
                           ],
                         ),
                       ),
@@ -210,5 +191,8 @@ class StudentProfileScreen extends StatelessWidget {
     );
   }
 
-
+  Widget label(String label) {
+    return Text(label,
+        style: TextStyle(fontSize: 16, color: Colors.grey[900], height: 1.1));
+  }
 }

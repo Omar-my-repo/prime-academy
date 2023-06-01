@@ -30,14 +30,15 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ScreenTitle('تقييم الطلبة'),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             SizedBox(
               height: 40,
               child: ListView.separated(
                   itemCount: DemoLists.levels.length,
                   scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(horizontal: 2),
-                  separatorBuilder: (context, index) => SizedBox(width: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
                       child: LevelCard(
@@ -52,14 +53,15 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                     );
                   }),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             SizedBox(
               height: 40,
               child: ListView.separated(
                   itemCount: DemoLists.subjects.length,
                   scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(horizontal: 2),
-                  separatorBuilder: (context, index) => SizedBox(width: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
                       child: LevelCard(
@@ -75,14 +77,15 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                     );
                   }),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             SizedBox(
               height: 70,
               child: ListView.separated(
                   itemCount: DemoLists.monthsShortcuts.length,
                   scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(horizontal: 2),
-                  separatorBuilder: (context, index) => SizedBox(width: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return Center(
                       child: MonthCard(
@@ -98,15 +101,15 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                     );
                   }),
             ),
-            SizedBox(height: 10),
-            Divider(thickness: 1),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
+            const Divider(thickness: 1),
+            const SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
-                  padding: EdgeInsets.only(bottom: 30),
+                  padding: const EdgeInsets.only(bottom: 30),
                   itemCount: 20,
                   separatorBuilder: (contex, index) {
-                    return SizedBox(height: 5);
+                    return const SizedBox(height: 5);
                   },
                   itemBuilder: (context, index) {
                     return Card(
@@ -117,16 +120,16 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 12),
+                            const SizedBox(height: 12),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                CircleAvatar(
+                                const CircleAvatar(
                                   radius: 16,
                                   backgroundImage:
                                       AssetImage('assets/images/student.jpg'),
                                 ),
-                                SizedBox(width: 10),
+                                const SizedBox(width: 10),
                                 Text(
                                   'Hassan Gamal',
                                   style: TextStyle(
@@ -137,52 +140,55 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 6),
-                            Row(
-                              children: [
-                                Column(
-                                  children: [
-                                    Text('النسبة المؤية ',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
-                                    SizedBox(height: 10),
-                                    Text('نسبة الحضور',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
-                                    SizedBox(height: 10),
-                                    Text('السلوك ',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
-                                  ],
-                                ),
-                                SizedBox(width: 5),
-                                Column(
-                                  children: [
-                                    PercentageIndicator(percentage: .97),
-                                    SizedBox(height: 10),
-                                    PercentageIndicator(percentage: .94),
-                                    SizedBox(height: 10),
-                                    PercentageIndicator(percentage: .925),
-                                  ],
-                                )
-                              ],
+                            const SizedBox(height: 10),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                children: [
+                                  Column(
+                                    children: [
+                                      label('الحضور'),
+                                      SizedBox(height: 10),
+                                      label(
+                                        'الواجبات',
+                                      ),
+                                      SizedBox(height: 10),
+                                      label('المشاركة'),
+                                      SizedBox(height: 10),
+                                      label('السلوك'),
+                                      SizedBox(height: 10),
+                                      label('تقييم عام'),
+                                    ],
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Column(
+                                    children: [
+                                      PercentageIndicator(
+                                          percentage: .91,
+                                          progressColor: Color(0xffFFC107)),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(
+                                          percentage: .87,
+                                          progressColor: Color(0xff8BC34A)),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(
+                                          percentage: .825,
+                                          progressColor: Color(0xff03A9F4)),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(
+                                          percentage: .90,
+                                          progressColor: Color(0xffF06292)),
+                                      const SizedBox(height: 10),
+                                      PercentageIndicator(
+                                          percentage: .95,
+                                          progressColor: Color(0xffFF5722)),
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
-                            Divider(thickness: 1, height: 10),
-                            Row(
-                              children: [
-                                Text('التقييم الكلي: ',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.black54)),
-                                SizedBox(width: 10),
-                                PercentageIndicator(
-                                    percentage: .935,
-                                    progressColor: Colors.lightGreen),
-                              ],
-                            ),
-                            SizedBox(height: 12),
+                            const SizedBox(height: 12),
                             Align(
                               alignment: Alignment.centerLeft,
                               child: ElevatedButton(
@@ -201,7 +207,7 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                           return StatefulBuilder(
                                               builder: (context, setState) {
                                             return AlertDialog(
-                                              title: Text("التقييم"),
+                                              title: const Text("التقييم"),
                                               content: SingleChildScrollView(
                                                 child: Column(
                                                   mainAxisSize:
@@ -222,7 +228,7 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                                                       .toInt()
                                                                       .toDouble()),
                                                     ),
-                                                    Divider(
+                                                    const Divider(
                                                       thickness: 1,
                                                     ),
                                                     ratingSection(
@@ -240,7 +246,7 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                                                       .toInt()
                                                                       .toDouble()),
                                                     ),
-                                                    Divider(),
+                                                    const Divider(),
                                                     ratingSection(
                                                       sectionTitle: 'الواجبات',
                                                       rating: homeWork,
@@ -256,7 +262,7 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                                                       .toInt()
                                                                       .toDouble()),
                                                     ),
-                                                    Divider(),
+                                                    const Divider(),
                                                     ratingSection(
                                                       sectionTitle: 'تقييم عام',
                                                       rating: general,
@@ -271,11 +277,11 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                                                   .toInt()
                                                                   .toDouble()),
                                                     ),
-                                                    Text('ملاحظات'),
+                                                    const Text('ملاحظات'),
                                                     CustomTextField(
                                                         controller: _notes,
                                                         validator: (v) {}),
-                                                    SizedBox(height: 20),
+                                                    const SizedBox(height: 20),
                                                     SizedBox(
                                                       width: double.infinity,
                                                       child: MainButton(
@@ -290,9 +296,9 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
                                           });
                                         });
                                   },
-                                  child: Text('تقييم')),
+                                  child: const Text('تقييم')),
                             ),
-                            SizedBox(height: 4),
+                            const SizedBox(height: 4),
                           ],
                         ),
                       ),
@@ -319,14 +325,14 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
           children: [
             Text(
               sectionTitle,
-              style: TextStyle(height: 1),
+              style: const TextStyle(height: 1),
             ),
-            TextButton(onPressed: minusPress, child: Icon(Icons.remove)),
+            TextButton(onPressed: minusPress, child: const Icon(Icons.remove)),
             Text(
               '$rating',
-              style: TextStyle(height: 1),
+              style: const TextStyle(height: 1),
             ),
-            TextButton(onPressed: plusPress, child: Icon(Icons.add)),
+            TextButton(onPressed: plusPress, child: const Icon(Icons.add)),
           ],
         ),
         Slider(
@@ -344,6 +350,6 @@ class _StudentsRatingScreenState extends State<StudentsRatingScreen> {
 
   Widget label(String label) {
     return Text(label,
-        style: TextStyle(fontSize: 14, color: Colors.grey[700], height: 1.5));
+        style: TextStyle(fontSize: 16, color: Colors.grey[900], height: 1.1));
   }
 }

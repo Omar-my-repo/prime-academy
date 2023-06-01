@@ -88,25 +88,13 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                               children: [
                                 Column(
                                   children: [
-                                    Text('الدرجة: ',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
+                                    label('الدرجة: '),
                                     SizedBox(width: 10),
-                                    Text('النسبة المؤية ',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
+                                    label('النسبة المؤية '),
                                     SizedBox(height: 10),
-                                    Text('نسبة الحضور',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
+                                    label('نسبة الحضور'),
                                     SizedBox(height: 10),
-                                    Text('السلوك ',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black54)),
+                                    label('السلوك '),
                                   ],
                                 ),
                                 SizedBox(width: 5),
@@ -129,7 +117,7 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
                             Divider(thickness: 1, height: 10),
                             Row(
                               children: [
-                                Text('التقييم الكلي: ',
+                                Text('التقييم الكلي',
                                     style: TextStyle(
                                         fontSize: 16, color: Colors.black54)),
                                 SizedBox(width: 10),
@@ -155,5 +143,10 @@ class _LevelUpgradeScreenState extends State<LevelUpgradeScreen> {
         ),
       ),
     );
+  }
+
+  Widget label(String label) {
+    return Text(label,
+        style: TextStyle(fontSize: 16, color: Colors.grey[900], height: 1.1));
   }
 }

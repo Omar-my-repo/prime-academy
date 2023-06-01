@@ -27,7 +27,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const HeaderInfoSection(),
-              const SizedBox(height: 8),
               const StyleSection(),
               const SizedBox(height: 8),
               const LanguageSection(),
